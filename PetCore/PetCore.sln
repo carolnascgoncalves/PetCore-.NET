@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCore", "PetCore\PetCore.csproj", "{AF4065ED-1445-4F60-8743-66B0F9BDFBF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCore.Domain", "PetCore.Domain\PetCore.Domain.csproj", "{5D17AB55-5CBE-447A-8FDC-CF3917E05CDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF4065ED-1445-4F60-8743-66B0F9BDFBF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4065ED-1445-4F60-8743-66B0F9BDFBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4065ED-1445-4F60-8743-66B0F9BDFBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4065ED-1445-4F60-8743-66B0F9BDFBF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D17AB55-5CBE-447A-8FDC-CF3917E05CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D17AB55-5CBE-447A-8FDC-CF3917E05CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D17AB55-5CBE-447A-8FDC-CF3917E05CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D17AB55-5CBE-447A-8FDC-CF3917E05CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

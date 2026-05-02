@@ -7,5 +7,5 @@ public class Clinica
     public string Cnpj { get; private set; }
     
     //1:1 Endereco
-    public Endereco Endereco { get; private set; }
+    public Guid IdEndereco { get; private set; }
 }

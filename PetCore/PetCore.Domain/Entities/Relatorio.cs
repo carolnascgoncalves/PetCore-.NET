@@ -5,7 +5,7 @@ public class Relatorio
     public Guid Id { get; private set; } = Guid.NewGuid();
     
     //N:1 Historico
-    public Historico Historico { get; set; }
+    public Guid IdHistorico { get; set; }
     //N:1 Medico
-    public Medico MedicoResponsavel { get; set; }
+    public Guid IdMedicoResponsavel { get; set; }
 }

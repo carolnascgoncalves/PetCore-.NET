@@ -15,8 +15,8 @@ public class Pet
     public bool Status { get; private set; }
 
     // 1:1 Historico
-    public Historico Historico { get; set; }
+    public Guid IdHistorico { get; set; }
 
     //N:N Tutor
-    public List<Tutor> Tutores { get; set; }
+    public List<Guid> IdTutores { get; set; }
 }

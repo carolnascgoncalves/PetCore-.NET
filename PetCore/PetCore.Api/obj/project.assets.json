@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore\\PetCore.csproj",
-      "projectName": "PetCore",
-      "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore\\PetCore.csproj",
+      "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj",
+      "projectName": "PetCore.Api",
+      "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj",
       "packagesPath": "C:\\Users\\carol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore\\obj\\",
+      "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carol\\AppData\\Roaming\\NuGet\\NuGet.Config"

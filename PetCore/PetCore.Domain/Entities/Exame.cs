@@ -8,7 +8,7 @@ public class Exame : DocumentoBase
     public string TipoExame { get; private set; }
 
     //N:1 Medico
-    public Medico MedicoResponsavel { get; set; }
-    public Pet PetVinculado { get; set; }
+    public Guid IdMedicoResponsavel { get; set; }
+    public Guid IdPetVinculado { get; set; }
     
 }

@@ -8,4 +8,6 @@ public class Clinica
     
     //1:1 Endereco
     public Guid IdEndereco { get; private set; }
+    public List<Guid> IdRelatorios { get; private set; }
+    
 }

@@ -9,6 +9,9 @@ public class UsuarioBase
     public DateOnly DataNascimento { get; private set; }
     public string Telefone { get; private set; }
     public string Email{ get; private set; }
-    public GeneroSexoEnum GeneroSexo { get; private set; }
+    
+    public GeneroSexoEnum Sexo { get; private set; }
     public string Senha { get; set; }
+    
+    public string UrlImg { get; set; }
 }

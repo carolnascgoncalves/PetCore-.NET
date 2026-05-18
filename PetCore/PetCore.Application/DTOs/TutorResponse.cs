@@ -10,9 +10,9 @@ public class TutorResponse
     public DateOnly DataNascimento { get;  set; }
     public string Telefone { get;  set; }
     public string Email{ get;  set; }
-    public GeneroSexoEnum GeneroSexo { get;  set; }
-    public string Senha { get; set; }
-    public List<Guid> IdPets { get; set; }
+    public GeneroSexoEnum Sexo { get;  set; }
+
+    public string UrlImg { get; set; }
 
     public TutorResponse(Tutor tutor)
     {
@@ -21,8 +21,7 @@ public class TutorResponse
         DataNascimento = tutor.DataNascimento;
         Telefone = tutor.Telefone;
         Email = tutor.Email;
-        GeneroSexo = tutor.GeneroSexo;
-        Senha = tutor.Senha;
-        IdPets = tutor.IdPets;
+        Sexo = tutor.Sexo;
+        UrlImg = tutor.UrlImg;
     }
 }

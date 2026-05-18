@@ -13,6 +13,8 @@ public class Pet
     public string Porte { get; private set; }
     public GeneroSexoEnum Sexo { get; private set; }
     public bool Status { get; private set; }
+    
+    public string UrlImg { get; private set; }
 
     // 1:1 Historico
     public Guid IdHistorico { get; set; }

@@ -5,20 +5,19 @@ namespace PetCore.Application.DTOs;
 public class ExameResponse
 {
     public Guid Id { get;  set; }
-    public string Nome { get;  set; } = string.Empty;
-    public bool? Ativo { get;  set; }
+    public string Nome { get;  set; }
     public DateOnly Data { get;  set; }
-    public string TipoExame { get;  set; } = string.Empty;
-    public Guid IdMedicoResponsavel { get; set; }
-    public Guid IdPetVinculado { get; set; }
+    public string Tipo { get;  set; } 
+    public Guid IdMedico { get; set; }
+    public Guid IdProntuario { get; set; }
 
     public ExameResponse(Exame exame) {
         Id = exame.Id;
         Nome = exame.Nome;
-        Ativo = exame.Ativo;
         Data = exame.Data;
-        TipoExame = exame.TipoExame;
-        IdMedicoResponsavel = exame.IdMedicoResponsavel;
-        IdPetVinculado = exame.IdPetVinculado;
+        Tipo = exame.Tipo;
+        IdMedico = exame.IdMedico;
+        IdProntuario = exame.IdProntuario;
+
     }
 }

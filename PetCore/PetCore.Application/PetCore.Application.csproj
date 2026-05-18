@@ -10,4 +10,8 @@
       <ProjectReference Include="..\PetCore.Domain\PetCore.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Services\Implementations\" />
+    </ItemGroup>
+
 </Project>

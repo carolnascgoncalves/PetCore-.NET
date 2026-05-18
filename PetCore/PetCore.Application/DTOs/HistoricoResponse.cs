@@ -4,12 +4,16 @@ namespace PetCore.Application.DTOs;
 
 public class HistoricoResponse
 {
-    public DateOnly DataAbertura { get;  set; }
-    public bool? Status { get;  set; }
+    public Guid Id { get; set; }
+    public bool Status { get; set; }
+    public List<Guid> IdProntuarios { get; set; }
+    public Guid IdPet { get; set; }
 
     public HistoricoResponse(Historico historico)
     {
-        DataAbertura = historico.DataAbertura;
+        Id = historico.Id;
         Status = historico.Status;
+        IdProntuarios = historico.IdProntuarios;
+        IdPet = historico.IdPet;
     }
 }

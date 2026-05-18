@@ -4,20 +4,22 @@ namespace PetCore.Application.DTOs;
 
 public class ProntuarioRequest
 {
-    [Required(ErrorMessage = "O campo 'Validade' deve ser preenchido")]
+    [Required(ErrorMessage = "O campo 'Data' deve ser preenchido")]
     public DateOnly DataEmissao { get;  set; }
     
+    [Required(ErrorMessage = "O campo 'Descricao' deve ser preenchido")]
+    [StringLength(300, MinimumLength = 2, ErrorMessage = "Nome deve ter entre 2 à 300 caracteres")]
     public string Descricao { get;  set; }
+
+    [Required(ErrorMessage = "O campo 'IdMedico' deve ser preenchido")]
+    public Guid IdMedico { get; set; }
     
-    [Required(ErrorMessage = "O campo 'IdPetVinculado' deve ser preenchido")]
-    public Guid IdPetVinculado { get; set; }
+    [Required(ErrorMessage = "O campo 'IdHistorico' deve ser preenchido")]
+    public Guid IdHistorico { get; set; }
     
-    [Required(ErrorMessage = "O campo 'IdTutorResponsavel' deve ser preenchido")]
-    public Guid IdTutorResponsavel { get; set; }
+    [Required(ErrorMessage = "O campo 'IdExames' deve ser preenchido")]
+    public List<Guid> IdExames { get; set; }
     
-    [Required(ErrorMessage = "O campo 'IdHistoricoPertencente' deve ser preenchido")]
-    public Guid IdHistoricoPertencente { get; set; }
-    
-    [Required(ErrorMessage = "O campo 'IdMedicoResponsavel' deve ser preenchido")]
-    public Guid IdMedicoResponsavel { get; set; }
+    [Required(ErrorMessage = "O campo 'IdReceitas' deve ser preenchido")]
+    public List<Guid> IdReceitas { get; set; }
 }

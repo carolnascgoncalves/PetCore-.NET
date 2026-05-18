@@ -38,5 +38,9 @@ public class PetRequest
     [Required(ErrorMessage = "O campo 'Id do(s) Tutor(es)' deve ser preenchido")]
     public List<Guid> IdTutores { get; set; }
     
-    public bool? Status { get;  set; }
+    [Required(ErrorMessage = "O campo 'UrlImg' deve ser preenchido")]
+    [StringLength(30, MinimumLength = 2, ErrorMessage = "UrlImg deve ter entre 2 à 30 caracteres")]
+    public string UrlImg { get;  set; }
+
+    public bool Status { get; set; } = true;
 }

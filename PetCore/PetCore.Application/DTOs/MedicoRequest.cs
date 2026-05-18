@@ -22,13 +22,12 @@ public class MedicoRequest
     public string Email { get; set; }
     
     [Required(ErrorMessage = "O campo 'Gênero' deve ser preenchido")]
-    public GeneroSexoEnum GeneroEnum { get; set; }
+    public GeneroSexoEnum Sexo { get; set; }
     
     [Required(ErrorMessage = "O campo 'Senha' deve ser preenchido")]
     [StringLength(30, MinimumLength = 10, ErrorMessage = "Senha deve ter entre 10 à 30 caracteres")]
     public string Senha { get; set; }
-
-        
+    
     [Required(ErrorMessage = "O campo 'Especialidade' deve ser preenchido")]
     [StringLength(200, ErrorMessage = "Especialidade deve ter no máximo 200 caracteres")]
     public string Especialidade { get; set; }

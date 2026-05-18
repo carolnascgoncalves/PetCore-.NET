@@ -6,4 +6,6 @@ public class Medicamento : DocumentoBase
 {
     public string Dosagem { get; private set; }
     public string Instrucao { get; private set; }
+    
+    public List<Guid> IdReceita { get; private set; }
 }

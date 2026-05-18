@@ -6,16 +6,16 @@ namespace PetCore.Application.DTOs;
 public class PetResponse
 {
     public Guid Id { get;  set; }
-    public string Nome { get;  set; } = String.Empty;
-    public string Especie { get;  set; } = String.Empty;
-    public string Raca { get;  set; } = String.Empty;
+    public string Nome { get;  set; }
+    public string Especie { get;  set; }
+    public string Raca { get;  set; }
     public DateOnly DataNasc { get;  set; }
-    public string Pelagem { get;  set; } = String.Empty;
-    public string Porte { get;  set; } = String.Empty;
+    public string Pelagem { get;  set; }
+    public string Porte { get;  set; } 
     public GeneroSexoEnum Sexo { get;  set; }
     public bool? Status { get;  set; }
     public Guid IdHistorico { get; set; }
-    public List<Guid> IdTutores { get; set; }
+    public string UrlImg { get; set; }
 
     public PetResponse(Pet pet)
     {
@@ -29,7 +29,6 @@ public class PetResponse
         Sexo = pet.Sexo;
         Status = pet.Status; 
         IdHistorico = pet.IdHistorico;
-        IdTutores = pet.IdTutores;
-        IdTutores = pet.IdTutores;
+        UrlImg = pet.UrlImg;
     }
 }

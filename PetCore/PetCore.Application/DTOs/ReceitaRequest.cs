@@ -14,11 +14,6 @@ public class ReceitaRequest
     [Required(ErrorMessage = "O campo 'IdMedico' deve ser preenchido")]
     public Guid IdMedicoResponsavel { get; set; }
     
-    [Required(ErrorMessage = "O campo 'IdPet' deve ser preenchido")]
-    public Guid IdPetVinculado { get; set; }
-    
     [Required(ErrorMessage = "O campo 'Id Medicamentos' deve ser preenchido")]
     public List<Guid> IdMedicamentos { get; set; }
-    
-    public bool? Ativo { get; set; }
 }

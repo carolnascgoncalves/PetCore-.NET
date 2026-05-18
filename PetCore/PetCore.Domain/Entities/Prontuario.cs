@@ -6,9 +6,11 @@ public class Prontuario
     public DateOnly DataEmissao { get; private set; }
     public string Descricao { get; private set; }
     
-    public Guid IdPetVinculado { get; set; }
-    public Guid IdTutorResponsavel { get; set; }
-    public Guid IdHistoricoPertencente { get; set; }
+    public List<Guid> idExames { get; set; }
+    
+    public List<Guid> idReceitas { get; set; }
+    
+    public Guid IdHistorico { get; set; }
     //N:1 Medico 
-    public Guid IdMedicoResponsavel { get; set; }
+    public Guid IdMedico { get; set; }
 }

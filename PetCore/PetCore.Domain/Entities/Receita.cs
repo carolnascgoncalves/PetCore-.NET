@@ -6,8 +6,8 @@ public class Receita : DocumentoBase
 {
     public DateOnly Validade { get; private set; }
     public Guid IdMedicoResponsavel { get; private set; }
-    public Guid IdPetVinculado { get; private set; }
+    public Guid IdProntuario { get; private set; }
     
     // N:N medicamento
-    public List<Guid> Medicamentos { get; set; }
+    public List<Guid> IdMedicamentos { get; set; }
 }

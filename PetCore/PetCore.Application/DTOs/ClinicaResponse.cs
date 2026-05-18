@@ -5,8 +5,8 @@ namespace PetCore.Application.DTOs;
 public class ClinicaResponse
 {
     public Guid Id { get; set; }
-    public string Nome { get;  set; } = string.Empty;
-    public string Cnpj { get;  set; } = string.Empty;
+    public string Nome { get;  set; }
+    public string Cnpj { get;  set; } 
     public Guid IdEndereco { get;  set; }
 
     public ClinicaResponse(Clinica clinica)

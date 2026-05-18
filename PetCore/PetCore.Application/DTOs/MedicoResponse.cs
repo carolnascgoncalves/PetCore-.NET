@@ -6,13 +6,16 @@ namespace PetCore.Application.DTOs;
 public class MedicoResponse
 {
     public Guid Id { get;  set; } 
-    public string Nome { get;  set; } = String.Empty;
+    public string Nome { get;  set; } 
     public DateOnly DataNascimento { get;  set; }
-    public string Telefone { get;  set; } = String.Empty;
-    public string Email{ get;  set; } = String.Empty;
-    public GeneroSexoEnum GeneroSexo { get;  set; }
-    public string Senha { get; set; } = String.Empty;
-    public string Especialidade { get;  set; } = String.Empty;
+    public string Telefone { get;  set; } 
+    public string Email{ get;  set; }
+    public GeneroSexoEnum Sexo { get;  set; }
+    public string Especialidade { get;  set; }
+    public List<Guid> IdRelatorios { get; set; }
+    public List<Guid> IdProntuarios { get; set; }
+    public List<Guid> IdExames { get; set; }
+    public List<Guid> IdReceitas { get; set; }
 
     public MedicoResponse(Medico medico)
     {
@@ -21,8 +24,11 @@ public class MedicoResponse
         DataNascimento = medico.DataNascimento;
         Telefone = medico.Telefone;
         Email = medico.Email;
-        GeneroSexo = medico.GeneroSexo;
-        Senha = medico.Senha;
+        Sexo = medico.Sexo;
         Especialidade = medico.Especialidade;
+        IdRelatorios = medico.IdRelatorios;
+        IdProntuarios = medico.IdProntuarios;
+        IdExames = medico.IdExames;
+        IdReceitas = medico.IdReceitas;
     }
 }

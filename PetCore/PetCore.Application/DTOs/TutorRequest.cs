@@ -19,18 +19,15 @@ public class TutorRequest
     [StringLength(11, MinimumLength = 11, ErrorMessage = "Telefone deve ter 11 caracteres")]
     public string Telefone { get; set; }
     
+    [Required(ErrorMessage = "O campo 'Sexo' deve ser preenchido")]
+    public GeneroSexoEnum Sexo { get; set; }
+    
     [Required(ErrorMessage = "O campo 'Email' deve ser preenchido")]
     [EmailAddress]
     [StringLength(200, ErrorMessage = "Email deve ter no máximo 200 caracteres")]
     public string Email { get; set; }
     
-    [Required(ErrorMessage = "O campo 'Gênero' deve ser preenchido")]
-    public GeneroSexoEnum GeneroEnum { get; set; }
-    
     [Required(ErrorMessage = "O campo 'Senha' deve ser preenchido")]
     [StringLength(30, MinimumLength = 10, ErrorMessage = "Senha deve ter entre 10 à 30 caracteres")]
     public string Senha { get; set; }
-
-    [Required(ErrorMessage = "O campo 'Id Pets' deve ser preenchido")]
-    public List<Guid> IdPets { get; set; }
 }

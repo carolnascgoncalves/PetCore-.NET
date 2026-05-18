@@ -5,10 +5,10 @@ namespace PetCore.Domain.Entities;
 public class Exame : DocumentoBase
 {
     public DateOnly Data { get; private set; }
-    public string TipoExame { get; private set; }
+    public String Tipo { get; private set; }
 
     //N:1 Medico
-    public Guid IdMedicoResponsavel { get; set; }
-    public Guid IdPetVinculado { get; set; }
+    public Guid IdMedico { get; set; }
+    public Guid IdProntuario { get; set; }
     
 }

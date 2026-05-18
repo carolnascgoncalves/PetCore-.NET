@@ -8,8 +8,6 @@ public class MedicamentoRequest
     [StringLength(150, MinimumLength = 2, ErrorMessage = "Nome deve ter entre 2 à 150 caracteres")]
     public string Nome { get;  set; }
     
-    public bool? Ativo { get;  set; }
-    
     [Required(ErrorMessage = "O campo 'Dosagem' deve ser preenchido")]
     [StringLength(10, MinimumLength = 3, ErrorMessage = "Nome deve ter entre 3 à 10 caracteres")]
     public string Dosagem { get;  set; }

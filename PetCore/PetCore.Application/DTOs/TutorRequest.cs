@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 using PetCore.Domain.Enums;
 
 namespace PetCore.Application.DTOs;
@@ -30,4 +31,7 @@ public class TutorRequest
     [Required(ErrorMessage = "O campo 'Senha' deve ser preenchido")]
     [StringLength(30, MinimumLength = 10, ErrorMessage = "Senha deve ter entre 10 à 30 caracteres")]
     public string Senha { get; set; }
+
+    public Tutor ToDomain() =>
+        new(Nome, DataNascimento, Telefone, Email, Sexo, Senha);
 }

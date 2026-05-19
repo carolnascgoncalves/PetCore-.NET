@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 
 namespace PetCore.Application.DTOs;
 
@@ -16,4 +17,7 @@ public class ReceitaRequest
     
     [Required(ErrorMessage = "O campo 'Id Medicamentos' deve ser preenchido")]
     public List<Guid> IdMedicamentos { get; set; }
+
+    public Receita ToDomain() =>
+        new (Nome, Validade, IdMedicoResponsavel, IdMedicamentos);
 }

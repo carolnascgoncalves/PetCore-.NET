@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 
 namespace PetCore.Application.DTOs;
 

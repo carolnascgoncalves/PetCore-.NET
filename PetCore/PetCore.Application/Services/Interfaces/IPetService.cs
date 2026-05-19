@@ -6,11 +6,9 @@ public interface IPetService
 {
     PetResponse Create(PetRequest request);
     
-    PetResponse UpdateStatus(Guid id, PetStatusRequest request);
+    PetResponse Patch(Guid id, PetDadosRequest request);
     
-    PetResponse UpdateImage(Guid id, PetImgRequest request);
-    
-    void DeleteImage(Guid id);
+    bool Delete(Guid id);
     
     IReadOnlyCollection<PetResponse> FetchAll();
     

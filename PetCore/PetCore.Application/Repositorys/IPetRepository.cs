@@ -5,10 +5,10 @@ namespace PetCore.Application.Interfaces;
 public interface IPetRepository
 {
     void Create(Pet pet);
-    void UpdateStatus(Pet pet);
-    void UpdateImage(Pet pet);
-    void DeleteImage(Pet pet);
+    void Patch(Pet pet);
+    void Delete(Pet pet);
     IReadOnlyCollection<Pet> FetchAll();
     IReadOnlyCollection<Pet> FetchMenuAll();
     Pet? FetchById(Guid id);
+    void SaveChanges();
 }

@@ -10,7 +10,7 @@ public interface ITutorService
     
     TutorResponse Create(TutorRequest request);
     
-    TutorResponse Update(Guid id, UserDadosRequest request);
+    TutorResponse Patch(Guid id, UserDadosRequest request);
     
     bool Delete(Guid id);
     

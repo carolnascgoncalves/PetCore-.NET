@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 
 namespace PetCore.Application.DTOs;
 
@@ -20,4 +21,5 @@ public class UserDadosRequest
     [Required(ErrorMessage = "O campo 'UrlImg' deve ser preenchido")]
     [StringLength(30, MinimumLength = 2)]
     public string UrlImg { get; set; }
+    
 }

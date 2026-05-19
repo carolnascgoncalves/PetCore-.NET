@@ -19,8 +19,8 @@ public class ProntuarioResponse
         DataEmissao = prontuario.DataEmissao;
         Descricao = prontuario.Descricao;
         IdMedico = prontuario.IdMedico;
-        IdExames = prontuario.idExames;
-        IdReceitas = prontuario.idReceitas;
+        IdExames = prontuario.IdExames;
+        IdReceitas = prontuario.IdReceitas;
         IdHistorico = prontuario.IdHistorico;
     }
 }

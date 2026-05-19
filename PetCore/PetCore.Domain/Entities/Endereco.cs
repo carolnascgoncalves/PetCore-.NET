@@ -7,4 +7,25 @@ public class Endereco
     public string Complemento { get; set; }
 
     public Guid IdClinica { get; set; }
+
+    public Endereco(string cep, string complemento)
+    {
+        UpdateCep(cep);
+
+        UpdateComplemento(complemento);
+    }
+
+    public void UpdateCep(string cep)
+    {
+        if (string.IsNullOrWhiteSpace(cep))
+            throw new Exception("Cep está vazia");
+        Cep = cep.Trim();
+    }
+
+    public void UpdateComplemento(string complemento)
+    {
+        if (string.IsNullOrWhiteSpace(complemento))
+            throw new Exception("Complemento está vazia");
+        Complemento = complemento.Trim();
+    }
 }

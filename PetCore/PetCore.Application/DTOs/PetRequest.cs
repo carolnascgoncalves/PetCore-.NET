@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 using PetCore.Domain.Enums;
 
 namespace PetCore.Application.DTOs;
@@ -43,4 +44,7 @@ public class PetRequest
     public string UrlImg { get;  set; }
 
     public bool Status { get; set; } = true;
+
+    public Pet ToDomain() =>
+        new (Nome, Especie, Raca, DataNasc,  Pelagem, Porte, Sexo, Status, UrlImg, IdHistorico, IdTutores);
 }

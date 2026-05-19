@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 
 namespace PetCore.Application.DTOs;
 
@@ -14,4 +15,7 @@ public class ClinicaRequest
 
     [Required(ErrorMessage = "O campo 'Id do Endereço' deve ser preenchido")]
     public Guid IdEndereco { get;  set; }
+    
+    public Clinica ToDomain() =>
+        new(Nome,Cnpj,IdEndereco);
 }

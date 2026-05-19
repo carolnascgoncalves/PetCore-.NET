@@ -10,7 +10,7 @@ public interface IEnderecoService
     
     EnderecoResponse Create(EnderecoRequest request);
     
-    EnderecoResponse Update(Guid id, EnderecoRequest request);
+    EnderecoResponse Patch(Guid id, EnderecoRequest request);
     
     bool Delete(Guid id);
 }

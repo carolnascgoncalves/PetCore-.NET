@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 using PetCore.Domain.Enums;
 
 namespace PetCore.Application.DTOs;
@@ -31,4 +32,7 @@ public class MedicoRequest
     [Required(ErrorMessage = "O campo 'Especialidade' deve ser preenchido")]
     [StringLength(200, ErrorMessage = "Especialidade deve ter no máximo 200 caracteres")]
     public string Especialidade { get; set; }
+
+    public Medico ToDomain() =>
+        new(Nome, DataNascimento, Telefone, Email, Sexo, Senha, Especialidade);
 }

@@ -21,4 +21,68 @@ public class Pet
 
     //N:N Tutor
     public List<Guid> IdTutores { get; set; }
+
+    public Pet(string nome, string especie, string raca, DateOnly dataNasc, string pelagem, string porte, GeneroSexoEnum sexo, bool status, string urlImg, Guid idHistorico, List<Guid> idTutores)
+    {
+        
+        if (string.IsNullOrWhiteSpace(nome))
+            throw new Exception("Nome está vazia");
+        Nome = nome.Trim();
+        
+        if (string.IsNullOrWhiteSpace(especie))
+            throw new Exception("Especie está vazia");
+        Especie = especie.Trim();
+        
+        if (string.IsNullOrWhiteSpace(raca))
+            throw new Exception("Raça está vazia");
+        Raca = raca.Trim();
+        
+        if (dataNasc.Year >= DateTime.Now.Year || dataNasc.Year <= DateTime.Now.AddYears(-15).Year || dataNasc.Equals(null))
+            throw new Exception("Data de nascimento inválida");
+        DataNasc = dataNasc;
+        
+        if (string.IsNullOrWhiteSpace(pelagem))
+            throw new Exception("Pelagem está vazia");
+        Pelagem = pelagem.Trim();
+        
+        if (string.IsNullOrWhiteSpace(porte))
+            throw new Exception("Porte está vazia");
+        Porte = porte.Trim();
+        
+        if (!Enum.IsDefined(sexo))
+            throw new Exception("Sexo está vazio");
+        Sexo = sexo;
+        
+        Status = status;
+        
+        if (string.IsNullOrWhiteSpace(urlImg))
+            throw new Exception("UrlImg está vazia");
+        UrlImg = urlImg.Trim();
+        
+        if (idHistorico == Guid.Empty)
+            throw new Exception("Id do Historico está vazio");
+        IdHistorico = idHistorico;
+        
+        if (idTutores == null || !idTutores.Any())
+            throw new Exception("Lista de tutores está vazia");
+        IdTutores = idTutores;
+    }
+
+    public void UpdateStatus(bool status)
+    {
+        Status = status;
+    }
+    
+    public void updateUrlImg(string urlImg)
+    {
+        if (string.IsNullOrWhiteSpace(urlImg))
+            throw new Exception("UrlImg está vazia");
+        UrlImg = urlImg.Trim();
+    }
+
+    public void Update(string url, bool status)
+    {
+        UpdateStatus(status);
+        updateUrlImg(url);
+    }
 }

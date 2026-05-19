@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 
 namespace PetCore.Application.DTOs;
 
@@ -20,4 +21,7 @@ public class ExameRequest
     
     [Required(ErrorMessage = "O campo 'IdProntuario' deve ser preenchido")]
     public Guid IdProntuario { get; set; }
+
+    public Exame ToDomain() =>
+        new(Nome, Data, Tipo, IdMedico, IdProntuario);
 }

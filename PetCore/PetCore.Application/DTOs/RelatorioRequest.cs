@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using PetCore.Domain.Entities;
 
 namespace PetCore.Application.DTOs;
 
@@ -16,4 +17,10 @@ public class RelatorioRequest
     
     [Required(ErrorMessage = "O campo 'IdHistorico' deve ser preenchido")]
     public Guid IdHistorico { get; set; }
+    
+    [Required(ErrorMessage = "O campo 'IdClinicas' deve ser preenchido")]
+    public List<Guid> IdClinicas { get; set; }
+    
+    public Relatorio ToDomain() =>
+        new (Observacao, IdMedico, IdHistorico, IdClinicas);
 }

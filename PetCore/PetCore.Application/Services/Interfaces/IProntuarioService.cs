@@ -10,7 +10,7 @@ public interface IProntuarioService
     
     ProntuarioResponse Create(ProntuarioRequest request);
     
-    ProntuarioResponse Update(Guid id, ProntuarioDadosRequest request);
+    ProntuarioResponse Patch(Guid id, ProntuarioDadosRequest request);
     
     bool Delete(Guid id);
 }

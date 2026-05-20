@@ -8,25 +8,22 @@ public class Historico
     
     public bool Status { get; private set; }
     
-    public Guid IdPet { get; private set; }
+    //RELACIONAMENTOS
+    public List<Relatorio> Relatorios { get; private set; }
     
-    public List<Guid> IdRelatorios { get; private set; }
+    public List<Prontuario> Prontuarios { get; private set; }
     
-    public List<Guid> IdProntuarios { get; private set; }
+    public Pet Pet { get; private set; }
+    
+    
 
-    public Historico(DateOnly data, Guid idPet, List<Guid> idProntuarios)
+    public Historico(DateOnly data)
     {
         if (data.Year > DateTime.Now.Year || data.Equals(null))
             throw new Exception("Data inválida");
         DataAbertura = data;
 
-        if (idPet == Guid.Empty)
-            throw new Exception("Id do pet inválido");
-        IdPet = idPet;
-        
-        if (idProntuarios == null || !idProntuarios.Any())
-            throw new Exception("Lista de prontuarios está vazia");
-        IdProntuarios = idProntuarios;
+        Status = true;
     }
     
 }

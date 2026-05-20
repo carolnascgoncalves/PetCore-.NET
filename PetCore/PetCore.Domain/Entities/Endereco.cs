@@ -6,7 +6,8 @@ public class Endereco
     public string Cep { get; set; }
     public string Complemento { get; set; }
 
-    public Guid IdClinica { get; set; }
+    //RELACIONAMENTO
+    public Clinica Clinica { get; set; }
 
     public Endereco(string cep, string complemento)
     {

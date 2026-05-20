@@ -6,10 +6,14 @@ public class Exame : DocumentoBase
 {
     public DateOnly Data { get; private set; }
     public String Tipo { get; private set; }
-
     //N:1 Medico
     public Guid IdMedico { get; set; }
+    //N:1 Prontuario
     public Guid IdProntuario { get; set; }
+    
+    //RELACIONAMENTOS
+    public Medico Medico { get; private set; } 
+    public Prontuario Prontuario { get; private set; }
 
     public Exame(string nome, DateOnly data, string tipo, Guid idMedico, Guid idProntuario)
     {

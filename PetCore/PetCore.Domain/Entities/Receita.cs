@@ -5,13 +5,17 @@ namespace PetCore.Domain.Entities;
 public class Receita : DocumentoBase
 {
     public DateOnly Validade { get; private set; }
+    //N:1 Medico
     public Guid IdMedicoResponsavel { get; private set; }
+    //N:1 Prontuario
     public Guid IdProntuario { get; private set; }
     
-    // N:N medicamento
-    public List<Guid> IdMedicamentos { get; set; }
+    //RELACIONAMENTOS
+    public List<Medicamento> Medicamentos { get; set; }
+    public Medico Medico { get; private set; } 
+    public Prontuario Prontuario { get; private set; }
 
-    public Receita(String nome, DateOnly validade, Guid idMedicoResponsavel, List<Guid> idMedicamentos)
+    public Receita(String nome, DateOnly validade, Guid idMedicoResponsavel, Guid idProntuario)
     {
         if (string.IsNullOrEmpty(nome))
             throw new Exception("Nome está vazio");
@@ -21,12 +25,12 @@ public class Receita : DocumentoBase
             throw new Exception("Validade inválida");
         Validade = validade;
         
-        if (IdMedicoResponsavel == Guid.Empty)
+        if (idMedicoResponsavel == Guid.Empty)
             throw new Exception("Id do Médico está vazio");
         IdMedicoResponsavel = idMedicoResponsavel;
 
-        if (idMedicamentos == null || !idMedicamentos.Any())
-            throw new Exception("Lista de medicamentos está vazia");
-        IdMedicamentos = idMedicamentos;
+        if (idProntuario == Guid.Empty)
+            throw new Exception("Id do Prontuario está vazio");
+        IdProntuario = idProntuario;
     }
 }

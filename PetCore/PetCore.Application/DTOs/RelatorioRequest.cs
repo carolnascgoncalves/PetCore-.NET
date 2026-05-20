@@ -22,5 +22,5 @@ public class RelatorioRequest
     public List<Guid> IdClinicas { get; set; }
     
     public Relatorio ToDomain() =>
-        new (Observacao, IdMedico, IdHistorico, IdClinicas);
+        new (Observacao, IdMedico, IdHistorico);
 }

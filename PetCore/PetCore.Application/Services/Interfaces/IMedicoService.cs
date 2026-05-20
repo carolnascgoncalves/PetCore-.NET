@@ -10,7 +10,7 @@ public interface IMedicoService
     
     MedicoResponse Create(MedicoRequest request);
     
-    MedicoResponse Patch(Guid id, UserDadosRequest request);
+    MedicoResponse? Patch(Guid id, UserDadosRequest request);
     
     bool Delete(Guid id);
     

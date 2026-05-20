@@ -4,7 +4,8 @@ using PetCore.Application.Services.Interfaces;
 
 namespace PetCore.Application.Services.Implementations;
 
-public class PetService(IPetRepository petRepository) : IPetService
+public class PetService(IPetRepository petRepository,
+    ITutorRepository tutorRepository) : IPetService
 {
     public IReadOnlyCollection<PetResponse> FetchAll()
     {
@@ -30,6 +31,12 @@ public class PetService(IPetRepository petRepository) : IPetService
     public PetResponse Create(PetRequest petRequest)
     {
         var pet = petRequest.ToDomain();
+
+        var tutores = tutorRepository
+            .FetchAllById(petRequest.IdTutores);
+
+        pet.Tutores = tutores.ToList();
+
         petRepository.Create(pet);
         petRepository.SaveChanges();
 

@@ -4,7 +4,8 @@ using PetCore.Application.Services.Interfaces;
 
 namespace PetCore.Application.Services.Implementations;
 
-public class ReceitaService(IReceitaRepository receitaRepository) : IReceitaService
+public class ReceitaService(IReceitaRepository receitaRepository,
+    IMedicamentoRepository medicamentoRepository) : IReceitaService
 {
     public IReadOnlyCollection<ReceitaResponse> FetchAll()
     {
@@ -23,6 +24,12 @@ public class ReceitaService(IReceitaRepository receitaRepository) : IReceitaServ
     public ReceitaResponse Create(ReceitaRequest recRequest)
     {
         var rec = recRequest.ToDomain();
+
+        var medicamentos = medicamentoRepository
+            .FetchAllById(recRequest.IdMedicamentos);
+
+        rec.Medicamentos = medicamentos.ToList();
+
         receitaRepository.Create(rec);
         receitaRepository.SaveChanges();
 

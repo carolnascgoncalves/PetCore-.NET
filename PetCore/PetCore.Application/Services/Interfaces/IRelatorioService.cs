@@ -10,7 +10,7 @@ public interface IRelatorioService
     
     RelatorioResponse Create(RelatorioRequest request);
     
-    RelatorioResponse Patch(Guid id, RelatorioDadosRequest request);
+    RelatorioResponse? Patch(Guid id, RelatorioDadosRequest request);
     
     bool Delete(Guid id);
 }

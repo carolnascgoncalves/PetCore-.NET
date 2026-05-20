@@ -10,7 +10,7 @@ public interface IClinicaService
     
     ClinicaResponse Create(ClinicaRequest request);
     
-    ClinicaResponse Patch(Guid id, ClinicaDadosRequest request);
+    ClinicaResponse? Patch(Guid id, ClinicaDadosRequest request);
     
     bool Delete(Guid id);
 }

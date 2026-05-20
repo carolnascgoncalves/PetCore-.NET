@@ -4,7 +4,8 @@ using PetCore.Application.Services.Interfaces;
 
 namespace PetCore.Application.Services.Implementations;
 
-public class RelatorioService(IRelatorioRepository relatorioRepository) : IRelatorioService
+public class RelatorioService(IRelatorioRepository relatorioRepository,
+    IClinicaRepository clinicaRepository) : IRelatorioService
 {
     public IReadOnlyCollection<RelatorioResponse> FetchAll()
     {
@@ -23,6 +24,10 @@ public class RelatorioService(IRelatorioRepository relatorioRepository) : IRelat
     public RelatorioResponse Create(RelatorioRequest relatorioRequest)
     {
         var content = relatorioRequest.ToDomain();
+        
+        var clinicas = clinicaRepository.FetchAllById(relatorioRequest.IdClinicas);
+        content.Clinicas = clinicas.ToList();
+        
         relatorioRepository.Create(content);
         relatorioRepository.SaveChanges();
 

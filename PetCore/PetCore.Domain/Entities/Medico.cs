@@ -7,10 +7,11 @@ public class Medico : UsuarioBase
 {
     public string Especialidade { get; private set; }
     
-    public List<Guid> IdRelatorios { get; private set; }
-    public List<Guid> IdProntuarios { get; private set; }
-    public List<Guid> IdExames { get; private set; }
-    public List<Guid> IdReceitas { get; private set; }
+    //RELACIONAMENTO
+    public List<Relatorio> Relatorios { get; private set; }
+    public List<Prontuario> Prontuarios { get; private set; }
+    public List<Exame> Exames { get; private set; }
+    public List<Receita> Receitas { get; private set; }
     
     public Medico(string nome, DateOnly dataNasc, string telefone, string email, GeneroSexoEnum sexo, string senha, string especialidade)
     {

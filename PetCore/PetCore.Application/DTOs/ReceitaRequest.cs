@@ -12,12 +12,15 @@ public class ReceitaRequest
     [Required(ErrorMessage = "O campo 'Validade' deve ser preenchido")]
     public DateOnly Validade { get; set; }
     
-    [Required(ErrorMessage = "O campo 'IdMedico' deve ser preenchido")]
+    [Required(ErrorMessage = "O campo 'Id Medico' deve ser preenchido")]
     public Guid IdMedicoResponsavel { get; set; }
+    
+    [Required(ErrorMessage = "O campo 'Id Prontuario' deve ser preenchido")]
+    public Guid IdProntuario { get; set; }
     
     [Required(ErrorMessage = "O campo 'Id Medicamentos' deve ser preenchido")]
     public List<Guid> IdMedicamentos { get; set; }
 
     public Receita ToDomain() =>
-        new (Nome, Validade, IdMedicoResponsavel, IdMedicamentos);
+        new (Nome, Validade, IdMedicoResponsavel, IdProntuario);
 }

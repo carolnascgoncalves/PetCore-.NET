@@ -10,7 +10,7 @@ public interface IExameService
     
     ExameResponse Create(ExameRequest request);
     
-    ExameResponse Patch(Guid id, ExameDadosRequest request);
+    ExameResponse? Patch(Guid id, ExameDadosRequest request);
     
     bool Delete(Guid id);
 }

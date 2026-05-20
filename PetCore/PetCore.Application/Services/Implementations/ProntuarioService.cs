@@ -4,7 +4,9 @@ using PetCore.Application.Services.Interfaces;
 
 namespace PetCore.Application.Services.Implementations;
 
-public class ProntuarioService(IProntuarioRepository prontuarioRepository) : IProntuarioService
+public class ProntuarioService(IProntuarioRepository prontuarioRepository,
+    IExameRepository exameRepository,
+    IReceitaRepository receitaRepository) : IProntuarioService
 {
     public IReadOnlyCollection<ProntuarioResponse> FetchAll()
     {
@@ -23,6 +25,16 @@ public class ProntuarioService(IProntuarioRepository prontuarioRepository) : IPr
     public ProntuarioResponse Create(ProntuarioRequest prontuarioRequest)
     {
         var pront = prontuarioRequest.ToDomain();
+
+        var exames = exameRepository
+            .FetchAllById(prontuarioRequest.IdExames);
+
+        var receitas = receitaRepository
+            .FetchAllById(prontuarioRequest.IdReceitas);
+
+        pront.Exames = exames.ToList();
+        pront.Receitas = receitas.ToList();
+
         prontuarioRepository.Create(pront);
         prontuarioRepository.SaveChanges();
 

@@ -35,8 +35,8 @@ public class PetRequest
     
     [Required(ErrorMessage = "O campo 'Id do Historico' deve ser preenchido")]
     public Guid IdHistorico { get; set; }
-
-    [Required(ErrorMessage = "O campo 'Id do(s) Tutor(es)' deve ser preenchido")]
+    
+    [Required(ErrorMessage = "O campo 'Id do Tutores' deve ser preenchido")]
     public List<Guid> IdTutores { get; set; }
     
     [Required(ErrorMessage = "O campo 'UrlImg' deve ser preenchido")]
@@ -46,5 +46,5 @@ public class PetRequest
     public bool Status { get; set; } = true;
 
     public Pet ToDomain() =>
-        new (Nome, Especie, Raca, DataNasc,  Pelagem, Porte, Sexo, Status, UrlImg, IdHistorico, IdTutores);
+        new (Nome, Especie, Raca, DataNasc,  Pelagem, Porte, Sexo, Status, UrlImg, IdHistorico);
 }

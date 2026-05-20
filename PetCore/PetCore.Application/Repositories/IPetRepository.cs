@@ -10,5 +10,6 @@ public interface IPetRepository
     IReadOnlyCollection<Pet> FetchAll();
     IReadOnlyCollection<Pet> FetchMenuAll();
     Pet? FetchById(Guid id);
+    IReadOnlyCollection<Pet> FetchAllById(List<Guid> ids);
     void SaveChanges();
 }

@@ -26,9 +26,19 @@ public class MedicoResponse
         Email = medico.Email;
         Sexo = medico.Sexo;
         Especialidade = medico.Especialidade;
-        IdRelatorios = medico.IdRelatorios;
-        IdProntuarios = medico.IdProntuarios;
-        IdExames = medico.IdExames;
-        IdReceitas = medico.IdReceitas;
+        
+        IdRelatorios = medico.Relatorios
+            .Select(x => x.Id)
+            .ToList();
+        IdProntuarios = medico.Prontuarios
+            .Select(x => x.Id)
+            .ToList();
+        IdExames = medico.Exames
+            .Select(x => x.Id)
+            .ToList();
+        IdReceitas = medico.Receitas
+            .Select(x => x.Id)
+            .ToList();
+        
     }
 }

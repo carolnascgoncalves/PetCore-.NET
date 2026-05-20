@@ -11,10 +11,14 @@ public class Relatorio
     //N:1 Medico
     public Guid IdMedicoResponsavel { get; set; }
     
-    public List<Guid> IdClinicas { get; set; }
+    
+    //RELACIONAMENTO
+    public List<Clinica> Clinicas { get; set; }
+    public Medico Medico { get; private set; }
+    public Historico Historico { get; private set; }
 
 
-    public Relatorio(string observacao, Guid idHistorico, Guid idMedicoResponsavel, List<Guid> idClinicas)
+    public Relatorio(string observacao, Guid idHistorico, Guid idMedicoResponsavel)
     {
         UpdateObs(observacao);
 
@@ -25,10 +29,6 @@ public class Relatorio
         if (IdMedicoResponsavel == Guid.Empty)
             throw new Exception("Id do Médico está vazio");
         IdMedicoResponsavel = idMedicoResponsavel;
-        
-        if (idClinicas == null || !idClinicas.Any())
-            throw new Exception("Lista de clinicas está vazia");
-        IdClinicas = idClinicas;
     }
 
     public void UpdateObs(string observacao)

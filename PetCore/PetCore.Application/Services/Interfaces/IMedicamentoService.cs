@@ -10,7 +10,7 @@ public interface IMedicamentoService
     
     MedicamentoResponse Create(MedicamentoRequest request);
     
-    MedicamentoResponse Patch(Guid id, MedicamentoDadosRequest request);
+    MedicamentoResponse? Patch(Guid id, MedicamentoDadosRequest request);
     
     bool Delete(Guid id);
 }

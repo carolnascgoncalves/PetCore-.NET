@@ -10,12 +10,23 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.7"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="10.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="10.0.0" />
+        <PackageReference Include="MySqlConnector" Version="2.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.7" />
+        <PackageReference Include="System.Reflection" Version="4.3.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PetCore.Application\PetCore.Application.csproj" />
+      <ProjectReference Include="..\PetCore.Infrastructure\PetCore.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

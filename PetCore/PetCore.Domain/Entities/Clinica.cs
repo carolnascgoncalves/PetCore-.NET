@@ -5,10 +5,11 @@ public class Clinica
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Nome { get; private set; }
     public string Cnpj { get; private set; }
-    
     //1:1 Endereco
     public Guid IdEndereco { get; private set; }
-    public List<Guid> IdRelatorios { get; private set; }
+ 
+    //RELACIONAMENTO
+    public Endereco Endereco { get; private set; }
 
     public Clinica(string nome, string cnpj, Guid idEndereco)
     {

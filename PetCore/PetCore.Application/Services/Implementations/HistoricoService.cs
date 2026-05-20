@@ -1,10 +1,14 @@
 using PetCore.Application.DTOs;
 using PetCore.Application.Interfaces;
 using PetCore.Application.Services.Interfaces;
+using PetCore.Domain.Entities;
 
 namespace PetCore.Application.Services.Implementations;
 
-public class HistoricoService(IHistoricoRepository historicoRepository) : IHistoricoService
+public class HistoricoService(IHistoricoRepository historicoRepository,
+    IPetRepository petRepository,
+    IRelatorioRepository relatorioRepository,
+    IProntuarioRepository prontuarioRepository) : IHistoricoService
 {
     public IReadOnlyCollection<HistoricoResponse> FetchAll()
     {
@@ -20,9 +24,10 @@ public class HistoricoService(IHistoricoRepository historicoRepository) : IHisto
         return hist is null ? null : new HistoricoResponse(hist);
     }
     
-    public HistoricoResponse Create(HistoricoRequest relatorioRequest)
+    public HistoricoResponse Create(HistoricoRequest historicoRequest)
     {
-        var hist = relatorioRequest.ToDomain();
+        var hist = historicoRequest.ToDomain();
+        
         historicoRepository.Create(hist);
         historicoRepository.SaveChanges();
 

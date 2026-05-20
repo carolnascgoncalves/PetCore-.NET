@@ -7,7 +7,8 @@ public class Medicamento : DocumentoBase
     public string Dosagem { get; private set; }
     public string Instrucao { get; private set; }
     
-    public List<Guid> IdReceita { get; private set; }
+    //RELACIONAMENTO
+    public List<Receita> Receitas { get; private set; }
 
     public Medicamento(string nome, string dosagem, string instrucao)
     {

@@ -13,7 +13,9 @@ public class HistoricoResponse
     {
         Id = historico.Id;
         Status = historico.Status;
-        IdProntuarios = historico.IdProntuarios;
-        IdPet = historico.IdPet;
+        IdProntuarios = historico.Prontuarios
+            .Select(x => x.Id)
+            .ToList();
+        IdPet = historico.Pet.Id;
     }
 }

@@ -6,7 +6,7 @@ public interface IPetService
 {
     PetResponse Create(PetRequest request);
     
-    PetResponse Patch(Guid id, PetDadosRequest request);
+    PetResponse? Patch(Guid id, PetDadosRequest request);
     
     bool Delete(Guid id);
     

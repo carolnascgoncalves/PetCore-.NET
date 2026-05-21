@@ -35,25 +35,34 @@ public class TutorConfiguration : IEntityTypeConfiguration<Tutor>
             .IsRequired();
         
         builder.Property(x => x.Sexo)
-            .IsRequired();
-        
+            .HasConversion<string>()
+            .HasMaxLength(1);
+
         builder.Property(x => x.Senha)
             .IsRequired();
-        
-        builder.Property(x => x.UrlImg)
-            .IsRequired();
-        
-        /*
-        // Chaves estrangeiras
-        builder.Property(x => x.IdPets)
-            .IsRequired();
 
-        // Relacionamento com PET (N:N).
+        builder.Property(x => x.UrlImg);
+        
+        // Relacionamento com pet (N:N).
+        builder.HasMany(x => x.Pets)
+            .WithMany(x => x.Tutores)
+            .UsingEntity<Dictionary<string, object>>(
+                "tut_pet_petcore",
 
-        builder.HasOne<User>()
-            .WithMany(x => x.Ratings)
-            .HasForeignKey(x => x.UserId)
-            .OnDelete(DeleteBehavior.Cascade);
-            */
+                right => right.HasOne<Pet>()
+                    .WithMany()
+                    .HasForeignKey("ID_pet_FK")
+                    .OnDelete(DeleteBehavior.Cascade),
+
+                left => left.HasOne<Tutor>()
+                    .WithMany()
+                    .HasForeignKey("ID_tut_FK")
+                    .OnDelete(DeleteBehavior.NoAction),
+
+                join =>
+                {
+                    join.ToTable("tut_pet_petcore");
+                    join.HasKey("ID_tut_FK", "ID_pet_FK");
+                });
     }
 }

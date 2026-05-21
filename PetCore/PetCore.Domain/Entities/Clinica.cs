@@ -10,6 +10,7 @@ public class Clinica
  
     //RELACIONAMENTO
     public Endereco Endereco { get; private set; }
+    public List<Relatorio> Relatorios { get; private set; }
 
     public Clinica(string nome, string cnpj, Guid idEndereco)
     {

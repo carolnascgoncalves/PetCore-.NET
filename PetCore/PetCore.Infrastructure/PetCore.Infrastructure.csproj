@@ -12,7 +12,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\PetCore.Application\PetCore.Application.csproj" />
       <ProjectReference Include="..\PetCore.Domain\PetCore.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Imigrations\" />
     </ItemGroup>
 
 </Project>

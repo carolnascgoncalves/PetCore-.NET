@@ -231,6 +231,19 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "PetCore.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "PetCore.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PetCore.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetCore.Application.dll": {}
+        }
+      },
       "PetCore.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -631,6 +644,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "PetCore.Application/1.0.0": {
+      "type": "project",
+      "path": "../PetCore.Application/PetCore.Application.csproj",
+      "msbuildProject": "../PetCore.Application/PetCore.Application.csproj"
+    },
     "PetCore.Domain/1.0.0": {
       "type": "project",
       "path": "../PetCore.Domain/PetCore.Domain.csproj",
@@ -641,6 +659,7 @@
     "net10.0": [
       "Microsoft.EntityFrameworkCore >= 10.0.0",
       "Microsoft.EntityFrameworkCore.Relational >= 10.0.0",
+      "PetCore.Application >= 1.0.0",
       "PetCore.Domain >= 1.0.0"
     ]
   },
@@ -669,6 +688,9 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
+            "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj": {
+              "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj"
+            },
             "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
               "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj"
             }

@@ -3,6 +3,7 @@ using PetCore.Application.Interfaces;
 using PetCore.Application.Services.Implementations;
 using PetCore.Application.Services.Interfaces;
 using PetCore.Infrastructure.Persistence;
+using PetCore.Infrastructure.Repositories;
 
 namespace PetCore.Extensions;
 
@@ -25,7 +26,7 @@ public static class PersistenceExtensions
         return services;
     }
 
-    /*
+    
     public static IServiceCollection AddRepositories(this IServiceCollection services)
     {
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -53,5 +54,5 @@ public static class PersistenceExtensions
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         });
         return services;
-    }*/
+    }
 }

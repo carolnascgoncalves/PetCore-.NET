@@ -6,7 +6,7 @@ namespace PetCore.Domain.Entities;
 public class Tutor : UsuarioBase
 {
     //RELACIONAMENTO
-    public List<Pet> Pets { get; private set; }
+    public List<Pet> Pets { get; set; }
 
     public Tutor(string nome, DateOnly dataNasc, string telefone, string email, GeneroSexoEnum sexo, string senha)
     {

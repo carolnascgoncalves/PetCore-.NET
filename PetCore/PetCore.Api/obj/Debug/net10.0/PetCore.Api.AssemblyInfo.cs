@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetCore.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1b9580c71ba45c6fa3985af8ed874b3f200b32b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3098c940b0e1451b900f4024692a09f29ebf3048")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetCore.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetCore.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

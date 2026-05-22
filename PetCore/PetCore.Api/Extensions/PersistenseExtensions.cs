@@ -31,17 +31,18 @@ public static class PersistenceExtensions
     {
         services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
-        services.AddScoped<IClinicaService, ClinicaService>();
-        services.AddScoped<IEnderecoService, EnderecoService>();
-        services.AddScoped<IExameService, ExameService>();
-        services.AddScoped<IHistoricoService, HistoricoService>();
-        services.AddScoped<IMedicamentoService, MedicamentoService>();
-        services.AddScoped<IMedicoService, MedicoService>();
-        services.AddScoped<IPetService, PetService>();
-        services.AddScoped<IProntuarioService, ProntuarioService>();
-        services.AddScoped<IReceitaService, ReceitaService>();
-        services.AddScoped<IRelatorioService, RelatorioService>();
-        services.AddScoped<ITutorService, TutorService>();
+        services.AddScoped<IClinicaRepository, ClinicaRepository>();
+        services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+        services.AddScoped<IExameRepository, ExameRepository>();
+        services.AddScoped<IHistoricoRepository, HistoricoRepository>();
+        services.AddScoped<IMedicamentoRepository, MedicamentoRepository>();
+        services.AddScoped<IMedicoRepository, MedicoRepository>();
+        services.AddScoped<IPetRepository, PetRepository>();
+        services.AddScoped<IProntuarioRepository, ProntuarioRepository>();
+        services.AddScoped<IReceitaRepository, ReceitaRepository>();
+        services.AddScoped<IRelatorioRepository, RelatorioRepository>();
+        services.AddScoped<ITutorRepository, TutorRepository>();
+
         return services;
     }
 
@@ -51,7 +52,7 @@ public static class PersistenceExtensions
         services.AddDbContext<PetCoreContext>(options =>
         {
             var connectionString = configuration.GetConnectionString("PetCoreMySql");
-            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+            options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 36)));
         });
         return services;
     }

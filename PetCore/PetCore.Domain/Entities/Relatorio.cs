@@ -17,7 +17,9 @@ public class Relatorio
     public Medico Medico { get; private set; }
     public Historico Historico { get; private set; }
 
-
+    
+    
+    
     public Relatorio(string observacao, Guid idHistorico, Guid idMedicoResponsavel)
     {
         UpdateObs(observacao);
@@ -43,5 +45,5 @@ public class Relatorio
     {
         UpdateObs(observacao);
     }
-    public Relatorio(){}
+    private Relatorio(){}
 }

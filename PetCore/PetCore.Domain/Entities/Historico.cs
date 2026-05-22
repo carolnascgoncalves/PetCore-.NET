@@ -15,7 +15,9 @@ public class Historico
     
     public Pet Pet { get; private set; }
     
-    
+    private Historico()
+    {
+    }
 
     public Historico(DateOnly data)
     {

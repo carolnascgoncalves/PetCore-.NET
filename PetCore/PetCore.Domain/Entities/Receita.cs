@@ -15,6 +15,10 @@ public class Receita : DocumentoBase
     public Medico Medico { get; private set; } 
     public Prontuario Prontuario { get; private set; }
 
+    
+    private Receita()
+    {
+    }
     public Receita(String nome, DateOnly validade, Guid idMedicoResponsavel, Guid idProntuario)
     {
         if (string.IsNullOrEmpty(nome))

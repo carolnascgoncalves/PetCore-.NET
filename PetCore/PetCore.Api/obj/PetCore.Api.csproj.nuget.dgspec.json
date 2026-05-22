@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj": {}
+    "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj": {
+    "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj",
+        "projectUniqueName": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj",
         "projectName": "PetCore.Api",
-        "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj",
-        "packagesPath": "C:\\Users\\carol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Api\\obj\\",
+        "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Api\\PetCore.Api.csproj",
+        "packagesPath": "C:\\Users\\ADM\\.nuget\\packages\\",
+        "outputPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ADM\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -26,11 +26,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj": {
-                "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj"
+              "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj": {
+                "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj"
               },
-              "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj"
+              "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj": {
+                "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj"
               }
             }
           }
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -57,15 +57,21 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[9.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[9.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[9.0.14, )"
             },
             "MySqlConnector": {
               "target": "Package",
@@ -103,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\carol\\.dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\ADM\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -521,17 +527,17 @@
         }
       }
     },
-    "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj": {
+    "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj",
+        "projectUniqueName": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj",
         "projectName": "PetCore.Application",
-        "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj",
-        "packagesPath": "C:\\Users\\carol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\obj\\",
+        "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj",
+        "packagesPath": "C:\\Users\\ADM\\.nuget\\packages\\",
+        "outputPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ADM\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -543,8 +549,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
-                "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj"
+              "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
+                "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj"
               }
             }
           }
@@ -559,7 +565,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -580,7 +586,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\carol\\.dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\ADM\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -858,17 +864,17 @@
         }
       }
     },
-    "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
+    "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj",
+        "projectUniqueName": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj",
         "projectName": "PetCore.Domain",
-        "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj",
-        "packagesPath": "C:\\Users\\carol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\obj\\",
+        "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj",
+        "packagesPath": "C:\\Users\\ADM\\.nuget\\packages\\",
+        "outputPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ADM\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -892,7 +898,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -913,7 +919,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\carol\\.dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\ADM\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1191,17 +1197,17 @@
         }
       }
     },
-    "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj": {
+    "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj",
         "projectName": "PetCore.Infrastructure",
-        "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\carol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Infrastructure\\obj\\",
+        "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Infrastructure\\PetCore.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ADM\\.nuget\\packages\\",
+        "outputPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ADM\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -1213,11 +1219,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj": {
-                "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj"
+              "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj": {
+                "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Application\\PetCore.Application.csproj"
               },
-              "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
-                "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj"
+              "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
+                "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj"
               }
             }
           }
@@ -1232,7 +1238,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -1240,11 +1246,21 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[9.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[10.0.0, )"
+              "version": "[9.0.14, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             }
           },
           "imports": [
@@ -1263,7 +1279,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\carol\\.dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\ADM\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

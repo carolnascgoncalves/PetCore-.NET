@@ -24,7 +24,7 @@ public class PetController(IPetService petService) : ControllerBase
     /// Lista todos os registros.
     /// </summary>
     /// <response code="200">Registros retornados com sucesso.</response>
-    [HttpGet]
+    [HttpGet("menu")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IActionResult FetchMenuAll()
     {

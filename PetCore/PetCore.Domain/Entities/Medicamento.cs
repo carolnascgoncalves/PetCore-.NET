@@ -10,6 +10,10 @@ public class Medicamento : DocumentoBase
     //RELACIONAMENTO
     public List<Receita> Receitas { get; private set; }
 
+    private Medicamento()
+    {
+    }
+    
     public Medicamento(string nome, string dosagem, string instrucao)
     {
         if (string.IsNullOrEmpty(nome))

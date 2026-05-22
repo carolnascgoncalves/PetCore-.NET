@@ -12,6 +12,10 @@ public class Clinica
     public Endereco Endereco { get; private set; }
     public List<Relatorio> Relatorios { get; private set; }
 
+    private Clinica()
+    {
+    }
+    
     public Clinica(string nome, string cnpj, Guid idEndereco)
     {
         UpdateNome(nome);

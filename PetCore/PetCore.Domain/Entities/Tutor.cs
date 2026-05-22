@@ -8,6 +8,10 @@ public class Tutor : UsuarioBase
     //RELACIONAMENTO
     public List<Pet> Pets { get; set; }
 
+    
+    private Tutor()
+    {
+    }
     public Tutor(string nome, DateOnly dataNasc, string telefone, string email, GeneroSexoEnum sexo, string senha)
     {
         if (string.IsNullOrEmpty(nome))

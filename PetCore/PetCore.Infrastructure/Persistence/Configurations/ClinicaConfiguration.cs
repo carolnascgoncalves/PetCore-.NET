@@ -8,7 +8,7 @@ public class ClinicaConfiguration: IEntityTypeConfiguration<Clinica>
     public void Configure(EntityTypeBuilder<Clinica> builder)
     {
         // Nome da tabela de avaliações.
-        builder.ToTable("relatorio_petcore");
+        builder.ToTable("clinica_petcore");
 
         // Chave primária.
         builder.HasKey(x => x.Id);
@@ -29,7 +29,7 @@ public class ClinicaConfiguration: IEntityTypeConfiguration<Clinica>
         //1:1 Endereco
         builder.HasOne(x => x.Endereco)
             .WithOne(x => x.Clinica)
-            .HasForeignKey<Pet>(x => x.IdHistorico);
+            .HasForeignKey<Clinica>(x => x.IdEndereco);
         
     }
 }

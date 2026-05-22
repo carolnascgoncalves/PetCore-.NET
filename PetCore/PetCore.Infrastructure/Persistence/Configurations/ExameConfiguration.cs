@@ -8,7 +8,7 @@ public class ExameConfiguration : IEntityTypeConfiguration<Exame>
     public void Configure(EntityTypeBuilder<Exame> builder)
     {
         // Nome da tabela de avaliações.
-        builder.ToTable("relatorio_petcore");
+        builder.ToTable("exame_petcore");
 
         // Chave primária.
         builder.HasKey(x => x.Id);

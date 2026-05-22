@@ -13,6 +13,10 @@ public class Medico : UsuarioBase
     public List<Exame> Exames { get; private set; }
     public List<Receita> Receitas { get; private set; }
     
+    private Medico()
+    {
+    }
+    
     public Medico(string nome, DateOnly dataNasc, string telefone, string email, GeneroSexoEnum sexo, string senha, string especialidade)
     {
         if (string.IsNullOrEmpty(nome))

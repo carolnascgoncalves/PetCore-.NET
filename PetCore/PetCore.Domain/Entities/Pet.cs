@@ -22,6 +22,10 @@ public class Pet
     public Historico Historico;
     public List<Tutor> Tutores { get; set; }
 
+    private Pet()
+    {
+    }
+    
     public Pet(string nome, string especie, string raca, DateOnly dataNasc, string pelagem, string porte, GeneroSexoEnum sexo, bool status, string urlImg, Guid idHistorico)
     {
         

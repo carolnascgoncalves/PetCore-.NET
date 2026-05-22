@@ -20,6 +20,10 @@ public class Prontuario
     
     public Historico Historico { get; private set; }
 
+    
+    private Prontuario()
+    {
+    }
 
     public Prontuario(DateOnly dataEmissao, string descricao, Guid idMedico, Guid idHistorico)
     {

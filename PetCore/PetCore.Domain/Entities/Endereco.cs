@@ -9,6 +9,10 @@ public class Endereco
     //RELACIONAMENTO
     public Clinica Clinica { get; set; }
 
+    private Endereco()
+    {
+    }
+    
     public Endereco(string cep, string complemento)
     {
         UpdateCep(cep);

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {}
+    "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
+    "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj",
+        "projectUniqueName": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj",
         "projectName": "PetCore.Domain",
-        "projectPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj",
-        "packagesPath": "C:\\Users\\carol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carol\\OneDrive\\Área de Trabalho\\FIAP\\Challenge - Clyvo\\.NET\\PetCore\\PetCore.Domain\\obj\\",
+        "projectPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\PetCore.Domain.csproj",
+        "packagesPath": "C:\\Users\\ADM\\.nuget\\packages\\",
+        "outputPath": "C:\\Manu\\fiap\\fiap\\Challege\\Challenge_2ano\\sprint1e2\\C#\\PetCore-.NET\\PetCore\\PetCore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ADM\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net10.0": {
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\carol\\.dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\ADM\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

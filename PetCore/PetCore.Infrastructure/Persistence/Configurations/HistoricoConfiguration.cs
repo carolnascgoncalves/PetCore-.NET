@@ -8,7 +8,7 @@ public class HistoricoConfiguration : IEntityTypeConfiguration<Historico>
     public void Configure(EntityTypeBuilder<Historico> builder)
     {
         // Nome da tabela de avaliações.
-        builder.ToTable("relatorio_petcore");
+        builder.ToTable("historico_petcore");
 
         // Chave primária.
         builder.HasKey(x => x.Id);

@@ -9,7 +9,7 @@ public class MedicoConfiguration : IEntityTypeConfiguration<Medico>
     public void Configure(EntityTypeBuilder<Medico> builder)
     {
         // Nome da tabela de avaliações.
-        builder.ToTable("relatorio_petcore");
+        builder.ToTable("medico_petcore");
 
         // Chave primária.
         builder.HasKey(x => x.Id);

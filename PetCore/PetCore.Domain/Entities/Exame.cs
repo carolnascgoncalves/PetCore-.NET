@@ -15,6 +15,10 @@ public class Exame : DocumentoBase
     public Medico Medico { get; private set; } 
     public Prontuario Prontuario { get; private set; }
 
+    private Exame()
+    {
+    }
+    
     public Exame(string nome, DateOnly data, string tipo, Guid idMedico, Guid idProntuario)
     {
         UpdateNome(nome);

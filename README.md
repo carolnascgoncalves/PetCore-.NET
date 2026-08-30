@@ -121,11 +121,23 @@ PetCore
 │   └── Enums
 │
 └── PetCore.Infrastructure
-    ├── Persistence
-    │   ├── Configurations
-    │   └── PetCoreContext.cs
-    ├── Repositories
-    └── Migrations?
+│   ├── Persistence
+│   ├── Configurations
+│   │   └── PetCoreContext.cs
+│   ├── Repositories
+│   └── Migrations
+│
+├── PetCore.Tests.Integration
+│   ├── Api.Collection.cs
+│   ├── HealthEndpointsTests.cs
+│   └── PetCoreApiFactory.cs
+│
+└── PetCore.Infrastructure
+│   ├── Application
+│   │   └── ClinicaServiceTests.cs
+│   ├── Domain
+│   │   └── ClinicaTests.cs
+
 ```
 
 ## Documentação das Rotas

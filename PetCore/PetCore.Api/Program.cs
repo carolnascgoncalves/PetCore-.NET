@@ -1,7 +1,14 @@
 using PetCore.Exceptions;
 using PetCore.Extensions;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, services, configuration) => configuration
+    .ReadFrom.Configuration(context.Configuration)
+    .ReadFrom.Services(services)
+    .Enrich.FromLogContext()
+    .Enrich.WithProperty("Application", "PetCore.Api"));
 
 // Add services to the container.
 
@@ -19,9 +26,12 @@ builder.Services.AddServices();
 builder.Services.AddRepositories();
 
 builder.Services.AddDBContext(builder.Configuration);
+builder.Services.AddPetCoreObservability(builder.Configuration);
 
+Console.WriteLine("Inicializando os serviços da API...");
 
 var app = builder.Build();
+Console.WriteLine("Serviços inicializados. Iniciando servidor HTTP...");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -37,10 +47,28 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCorrelationId();
+app.UseSerilogRequestLogging();
+app.UseApiMetrics();
+
 app.UseExceptionHandler();
 
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHealthChecks("/health/live", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
+{
+    Predicate = _ => false
+});
+app.MapHealthChecks("/health/ready", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
+{
+    Predicate = check => check.Tags.Contains("ready")
+});
+app.UseOpenTelemetryPrometheusScrapingEndpoint("/metrics");
 
 app.Run();
+
+/// <summary>
+/// 
+/// </summary>
+public partial class Program;

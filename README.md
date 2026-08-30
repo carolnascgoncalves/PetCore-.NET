@@ -1,4 +1,4 @@
-# 🐾 PetCore – Backend Java Spring Boot
+# 🐾 PetCore – Backend ASP.NET Core
 ## Challenger - 2026
 
 ## 🗣️ Dev do projeto
@@ -62,6 +62,43 @@ O sistema contempla relacionamentos entre entidades, como:
 - Swagger / Swashbuckle
 - Arquitetura em camadas
 - Fluent API para mapeamento das entidades
+- Serilog para logs estruturados
+- OpenTelemetry e Prometheus para tracing e métricas
+- xUnit, Moq e WebApplicationFactory para testes automatizados
+
+## 📈 Monitoramento e Observabilidade
+
+### Health checks
+
+- `GET /health/live`: confirma que a API está em execução, sem dependências externas.
+- `GET /health/ready`: valida a conectividade do `PetCoreContext` com o banco MySQL e o serviço externo configurado.
+
+O projeto atualmente utiliza **MySQL**, portanto o health check de dados acompanha a tecnologia existente; não foram introduzidos Oracle ou MongoDB. Para verificar um serviço externo, informe a URL no campo `ExternalServices:BaseUrl` de `PetCore.Api/appsettings.json`.
+
+### Logs, correlação e rastreabilidade
+
+O Serilog escreve logs estruturados nos níveis Information, Warning e Error tanto no console como em `PetCore.Api/logs/`, com retenção de 14 dias. Toda requisição recebe/devolve o cabeçalho `X-Correlation-ID`; envie-o na chamada para correlacionar os eventos de ponta a ponta.
+
+O OpenTelemetry instrumenta automaticamente as requisições ASP.NET Core e disponibiliza tracing distribuído entre as camadas. As métricas incluem duração de requisições e contador de erros HTTP 5xx, expostos em formato Prometheus em:
+
+```text
+GET /metrics
+```
+
+## ✅ Testes automatizados
+
+Os testes estão organizados por responsabilidade e seguem explicitamente o padrão **AAA** (Arrange, Act, Assert):
+
+- `PetCore.Tests.Unit`: testes de Domínio e Application com xUnit e Moq.
+- `PetCore.Tests.Integration`: testes HTTP com `WebApplicationFactory`, `CollectionFixture` compartilhada e banco EF Core InMemory, sem exigir MySQL local.
+
+Execute todos os testes na pasta `PetCore`:
+
+```bash
+dotnet test --configfile NuGet.Config
+```
+
+> A API atual não implementa middleware, esquema ou endpoints de autenticação. Para não alterar a lógica existente, os testes de integração validam os fluxos HTTP disponíveis (sucesso do health check e erro 404). Quando a autenticação for adicionada ao projeto, a mesma `PetCoreApiFactory` deverá ser usada para cobrir credenciais válidas e inválidas.
 
 ## 📂 Estrutura do Projeto
 

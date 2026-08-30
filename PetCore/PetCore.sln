@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCore.Application", "PetC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCore.Infrastructure", "PetCore.Infrastructure\PetCore.Infrastructure.csproj", "{2C3ECE32-4456-4BB8-B131-04CC33F48C31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCore.Tests.Unit", "PetCore.Tests.Unit\PetCore.Tests.Unit.csproj", "{E36BEE2D-2D52-47B3-91F0-3B8C0D1AF101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetCore.Tests.Integration", "PetCore.Tests.Integration\PetCore.Tests.Integration.csproj", "{D14EA7D0-0BFC-4745-BDA7-C1D70E51E102}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{2C3ECE32-4456-4BB8-B131-04CC33F48C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C3ECE32-4456-4BB8-B131-04CC33F48C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C3ECE32-4456-4BB8-B131-04CC33F48C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E36BEE2D-2D52-47B3-91F0-3B8C0D1AF101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E36BEE2D-2D52-47B3-91F0-3B8C0D1AF101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E36BEE2D-2D52-47B3-91F0-3B8C0D1AF101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E36BEE2D-2D52-47B3-91F0-3B8C0D1AF101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D14EA7D0-0BFC-4745-BDA7-C1D70E51E102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14EA7D0-0BFC-4745-BDA7-C1D70E51E102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14EA7D0-0BFC-4745-BDA7-C1D70E51E102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14EA7D0-0BFC-4745-BDA7-C1D70E51E102}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

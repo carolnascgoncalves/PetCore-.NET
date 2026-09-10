@@ -5,13 +5,14 @@ namespace PetCore.Infrastructure.Persistence;
 
 public class PetCoreContext(DbContextOptions<PetCoreContext> options) : DbContext(options)
 {
-    public DbSet<Clinica> Contents { get; set; }
+    public DbSet<Clinica> Clinicas { get; set; }
     public DbSet<Endereco> Endereco { get; set; }
     public DbSet<Exame> Exame { get; set; }
     public DbSet<Historico> Historico { get; set; }
     public DbSet<Medicamento> Medicamento { get; set; }
     public DbSet<Medico> Medico { get; set; }
     public DbSet<Pet> Pet { get; set; }
+    public DbSet<Protocolo> Protocolo { get; set; }
     public DbSet<Prontuario> Prontuario { get; set; }
     public DbSet<Receita> Receita { get; set; }
     public DbSet<Relatorio> Relatorio { get; set; }
@@ -22,6 +23,7 @@ public class PetCoreContext(DbContextOptions<PetCoreContext> options) : DbContex
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PetCoreContext).Assembly);
+        DemoData.Apply(modelBuilder);
         base.OnModelCreating(modelBuilder);
     }
 }

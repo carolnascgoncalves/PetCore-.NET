@@ -24,7 +24,7 @@ public class Relatorio
     {
         UpdateObs(observacao);
 
-        if (IdHistorico == Guid.Empty) 
+        if (idHistorico == Guid.Empty) 
             throw new Exception("Id do historico está vazio");
         IdHistorico = idHistorico;
 

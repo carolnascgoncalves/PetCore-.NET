@@ -19,6 +19,7 @@ public static class PersistenceExtensions
         services.AddScoped<IMedicoService, MedicoService>();
         services.AddScoped<IPetService, PetService>();
         services.AddScoped<IProntuarioService, ProntuarioService>();
+        services.AddScoped<IProtocoloService, ProtocoloService>();
         services.AddScoped<IReceitaService, ReceitaService>();
         services.AddScoped<IRelatorioService, RelatorioService>();
         services.AddScoped<ITutorService, TutorService>();
@@ -39,6 +40,7 @@ public static class PersistenceExtensions
         services.AddScoped<IMedicoRepository, MedicoRepository>();
         services.AddScoped<IPetRepository, PetRepository>();
         services.AddScoped<IProntuarioRepository, ProntuarioRepository>();
+        services.AddScoped<IProtocoloRepository, ProtocoloRepository>();
         services.AddScoped<IReceitaRepository, ReceitaRepository>();
         services.AddScoped<IRelatorioRepository, RelatorioRepository>();
         services.AddScoped<ITutorRepository, TutorRepository>();

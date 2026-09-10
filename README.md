@@ -298,6 +298,20 @@ DELETE /api/Tutor/{id}
 
 ---
 
+## Protocolo
+
+GET /api/Protocolo
+
+GET /api/Protocolo/{id}
+
+POST /api/Protocolo
+
+PUT /api/Protocolo/{id}/patch
+
+DELETE /api/Protocolo/{id}
+
+---
+
 ## 🌐 Retornos HTTP
 
 200 OK - Requisição realizada com sucesso

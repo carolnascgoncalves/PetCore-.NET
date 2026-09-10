@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetCore.Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using PetCore.Infrastructure.Persistence;
 namespace PetCore.Infrastructure.Migrations
 {
     [DbContext(typeof(PetCoreContext))]
-    partial class PetCoreContextModelSnapshot : ModelSnapshot
+    [Migration("20260910185525_SeedDemoData")]
+    partial class SeedDemoData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -498,29 +501,6 @@ namespace PetCore.Infrastructure.Migrations
                             IdMedicoResponsavel = new Guid("40000000-0000-0000-0000-000000000002"),
                             Observacao = "Manter rotina de hidratação e retorno anual."
                         });
-                });
-
-            modelBuilder.Entity("PetCore.Domain.Entities.Protocolo", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<string>("Texto")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Titulo")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("varchar(150)");
-
-                    b.HasKey("Id");
-                    b.ToTable("protocolo_petcore", (string)null);
-                    b.HasData(
-                        new { Id = "PROTO1", Titulo = "Preventivo contra picadas", Texto = "Pulgas, carrapatos e mosquitos podem transmitir doenças importantes aos pets. A prevenção pode ser feita com produtos tópicos, comprimidos ou coleiras específicas. Alguns produtos têm aplicação mensal, enquanto outros podem proteger por até três meses, conforme orientação do médico veterinário." },
-                        new { Id = "PROTO2", Titulo = "Vermifugação", Texto = "A vermifugação ajuda a prevenir parasitas intestinais que podem causar perda de peso, diarreia, anemia e outros problemas. A frequência varia conforme idade, ambiente, hábitos do pet e risco de exposição." },
-                        new { Id = "PROTO3", Titulo = "FIV e FeLV", Texto = "FIV e FeLV são doenças virais que acometem gatos. A testagem é importante, especialmente em felinos resgatados, com acesso à rua ou que convivem com outros gatos." });
                 });
 
             modelBuilder.Entity("PetCore.Domain.Entities.Tutor", b =>

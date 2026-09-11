@@ -23,7 +23,7 @@ public class Medico : UsuarioBase
             throw new Exception("Nome está vazio");
         Nome = nome.Trim();
         
-        if (dataNasc > DateOnly.FromDateTime(DateTime.Now.AddYears(-18)))
+        if (dataNasc > DateOnly.FromDateTime(DateTime.Now.AddYears(-18)) || dataNasc.Equals(null))
                     throw new Exception("Medico deve ser maior de 18 anos");
         DataNascimento = dataNasc;
         

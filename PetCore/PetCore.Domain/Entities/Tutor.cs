@@ -18,7 +18,7 @@ public class Tutor : UsuarioBase
             throw new Exception("Nome está vazio");
         Nome = nome;
 
-        if (dataNasc > DateOnly.FromDateTime(DateTime.Now.AddYears(-18)))
+        if (dataNasc > DateOnly.FromDateTime(DateTime.Now.AddYears(-15)) || dataNasc.Equals(null))
                     throw new Exception("Tutor deve ser maior de 18 anos");
         DataNascimento = dataNasc;
 

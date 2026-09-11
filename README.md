@@ -95,7 +95,7 @@ Os testes estão organizados por responsabilidade e seguem explicitamente o padr
 Execute todos os testes na pasta `PetCore`:
 
 ```bash
-dotnet test --configfile NuGet.Config
+dotnet test
 ```
 
 > A API atual não implementa middleware, esquema ou endpoints de autenticação. Para não alterar a lógica existente, os testes de integração validam os fluxos HTTP disponíveis (sucesso do health check e erro 404). Quando a autenticação for adicionada ao projeto, a mesma `PetCoreApiFactory` deverá ser usada para cobrir credenciais válidas e inválidas.

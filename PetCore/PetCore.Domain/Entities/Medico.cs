@@ -23,8 +23,8 @@ public class Medico : UsuarioBase
             throw new Exception("Nome está vazio");
         Nome = nome.Trim();
         
-        if (dataNasc.Year >= DateTime.Now.Year || dataNasc.Year <= DateTime.Now.AddYears(-15).Year || dataNasc.Equals(null))
-            throw new Exception("Data de nascimento inválida");
+        if (dataNasc > DateOnly.FromDateTime(DateTime.Now.AddYears(-18)))
+                    throw new Exception("Medico deve ser maior de 18 anos");
         DataNascimento = dataNasc;
         
         UpdateTelefone(telefone);

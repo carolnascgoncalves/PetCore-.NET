@@ -17,19 +17,19 @@ public class Tutor : UsuarioBase
         if (string.IsNullOrEmpty(nome))
             throw new Exception("Nome está vazio");
         Nome = nome;
-        
-        if (dataNasc.Year >= DateTime.Now.Year || dataNasc.Year <= DateTime.Now.AddYears(-15).Year || dataNasc.Equals(null))
-            throw new Exception("Data de nascimento inválida");
+
+        if (dataNasc > DateOnly.FromDateTime(DateTime.Now.AddYears(-18)))
+                    throw new Exception("Tutor deve ser maior de 18 anos");
         DataNascimento = dataNasc;
-        
+
         UpdateTelefone(telefone);
-        
+
         UpdateEmail(email);
-        
+
         if (!Enum.IsDefined(sexo))
             throw new Exception("Sexo está vazio");
         Sexo = sexo;
-        
+
         UpdateSenha(senha);
     }
 
@@ -40,28 +40,28 @@ public class Tutor : UsuarioBase
         UpdateSenha(senha);
         UpdateUrlImg(url);
     }
-    
+
     public void UpdateEmail(string email)
     {
         if (string.IsNullOrEmpty(email))
             throw new Exception("Email está vazio");
         Email = email.Trim();
     }
-    
+
     public void UpdateTelefone(string telefone)
     {
         if (string.IsNullOrEmpty(telefone))
             throw new Exception("Telefone está vazio");
         Telefone = telefone.Trim();
     }
-    
+
     public void UpdateSenha(string senha)
     {
         if (string.IsNullOrEmpty(senha))
             throw new Exception("Senha está vazia");
         Senha = senha.Trim();
     }
-    
+
     public void UpdateUrlImg(string url)
     {
         if (string.IsNullOrEmpty(url))

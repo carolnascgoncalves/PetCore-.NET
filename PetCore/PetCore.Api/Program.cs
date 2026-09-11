@@ -4,6 +4,24 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+const string CorsPolicyName = "PublicApi";
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? ["*"];
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(CorsPolicyName, policy =>
+    {
+        if (allowedOrigins.Contains("*"))
+        {
+            policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+        }
+        else
+        {
+            policy.WithOrigins(allowedOrigins).AllowAnyHeader().AllowAnyMethod();
+        }
+    });
+});
+
 builder.Host.UseSerilog((context, services, configuration) => configuration
     .ReadFrom.Configuration(context.Configuration)
     .ReadFrom.Services(services)
@@ -34,7 +52,7 @@ var app = builder.Build();
 Console.WriteLine("Serviços inicializados. Iniciando servidor HTTP...");
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Configuration.GetValue("Swagger:Enabled", true))
 {
     // app.MapOpenApi();
     app.UseSwagger();
@@ -46,6 +64,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(CorsPolicyName);
 
 app.UseCorrelationId();
 app.UseSerilogRequestLogging();

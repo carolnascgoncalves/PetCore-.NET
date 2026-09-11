@@ -15,18 +15,15 @@ public class Pet
     public bool Status { get; private set; }
     
     public string UrlImg { get; private set; }
-    //1:1 Historico
-    public Guid IdHistorico { get; set; }
-    
     //RELACIONAMENTO
-    public Historico Historico;
-    public List<Tutor> Tutores { get; set; }
+    public Historico? Historico { get; private set; }
+    public List<Tutor> Tutores { get; set; } = [];
 
     private Pet()
     {
     }
     
-    public Pet(string nome, string especie, string raca, DateOnly dataNasc, string pelagem, string porte, GeneroSexoEnum sexo, bool status, string urlImg, Guid idHistorico)
+    public Pet(string nome, string especie, string raca, DateOnly dataNasc, string pelagem, string porte, GeneroSexoEnum sexo, bool status, string urlImg)
     {
         
         if (string.IsNullOrWhiteSpace(nome))
@@ -63,9 +60,6 @@ public class Pet
             throw new Exception("UrlImg está vazia");
         UrlImg = urlImg.Trim();
         
-        if (idHistorico == Guid.Empty)
-            throw new Exception("Id do Historico está vazio");
-        IdHistorico = idHistorico;
     }
 
     public void UpdateStatus(bool status)

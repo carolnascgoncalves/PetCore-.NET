@@ -41,18 +41,7 @@ public class PetConfiguration : IEntityTypeConfiguration<Pet>
 
         builder.Property(x => x.UrlImg);
         
-        builder.Property(x => x.IdHistorico)
-            .IsRequired();
-        
         // RELACIONAMENTOS
         //N:N Tutor (TutorConfiguration)
-
-        
-        //1:1 Historico
-        builder.HasOne(x => x.Historico)
-            .WithOne(x => x.Pet)
-            .HasForeignKey<Pet>(x => x.IdHistorico);
-
-
     }
 }

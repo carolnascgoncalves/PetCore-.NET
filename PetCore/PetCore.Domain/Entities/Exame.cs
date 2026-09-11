@@ -52,7 +52,7 @@ public class Exame : DocumentoBase
 
     public void UpdateDate(DateOnly data)
     {
-        if (data.Year >= DateTime.Now.Year || data.Equals(null))
+        if (data.Year > DateTime.Now.Year || data.Equals(null))
             throw new Exception("Data inválida");
         Data = data;
     }

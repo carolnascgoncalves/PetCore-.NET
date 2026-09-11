@@ -25,7 +25,11 @@ public class HistoricoConfiguration : IEntityTypeConfiguration<Historico>
         //1:N Relatorios (RelatorioConfiguration)
       
         
-        //1:1 Pet (PetConfiguration)
+        //1:1 Pet. O histórico é dependente do pet, permitindo criar o pet primeiro.
+        builder.HasOne(x => x.Pet)
+            .WithOne(x => x.Historico)
+            .HasForeignKey<Historico>(x => x.IdPet)
+            .OnDelete(DeleteBehavior.Cascade);
 
         
         //1:N Prontuario (ProntuarioConfiguration)

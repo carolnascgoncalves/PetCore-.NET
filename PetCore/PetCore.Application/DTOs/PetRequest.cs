@@ -30,14 +30,9 @@ public class PetRequest
     public string Porte { get;  set; }
     
     [Required(ErrorMessage = "O campo 'Gênero' deve ser preenchido")]
-    [StringLength(1, ErrorMessage = "Sexo pode ter somente 1 caractere")]
     public GeneroSexoEnum Sexo { get;  set; }
     
-    [Required(ErrorMessage = "O campo 'Id do Historico' deve ser preenchido")]
-    public Guid IdHistorico { get; set; }
-    
-    [Required(ErrorMessage = "O campo 'Id do Tutores' deve ser preenchido")]
-    public List<Guid> IdTutores { get; set; }
+    public List<Guid> IdTutores { get; set; } = [];
     
     [Required(ErrorMessage = "O campo 'UrlImg' deve ser preenchido")]
     [StringLength(30, MinimumLength = 2, ErrorMessage = "UrlImg deve ter entre 2 à 30 caracteres")]
@@ -46,5 +41,5 @@ public class PetRequest
     public bool Status { get; set; } = true;
 
     public Pet ToDomain() =>
-        new (Nome, Especie, Raca, DataNasc,  Pelagem, Porte, Sexo, Status, UrlImg, IdHistorico);
+        new(Nome, Especie, Raca, DataNasc, Pelagem, Porte, Sexo, Status, UrlImg);
 }

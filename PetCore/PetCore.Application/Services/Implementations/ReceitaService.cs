@@ -26,7 +26,7 @@ public class ReceitaService(IReceitaRepository receitaRepository,
         var rec = recRequest.ToDomain();
 
         var medicamentos = medicamentoRepository
-            .FetchAllById(recRequest.IdMedicamentos);
+            .FetchAllById(recRequest.IdMedicamentos ?? []);
 
         rec.Medicamentos = medicamentos.ToList();
 

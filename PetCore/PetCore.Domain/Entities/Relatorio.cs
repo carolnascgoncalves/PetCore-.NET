@@ -13,7 +13,7 @@ public class Relatorio
     
     
     //RELACIONAMENTO
-    public List<Clinica> Clinicas { get; set; }
+    public List<Clinica> Clinicas { get; set; } = [];
     public Medico Medico { get; private set; }
     public Historico Historico { get; private set; }
 
@@ -28,7 +28,7 @@ public class Relatorio
             throw new Exception("Id do historico está vazio");
         IdHistorico = idHistorico;
 
-        if (IdMedicoResponsavel == Guid.Empty)
+        if (idMedicoResponsavel == Guid.Empty)
             throw new Exception("Id do Médico está vazio");
         IdMedicoResponsavel = idMedicoResponsavel;
     }

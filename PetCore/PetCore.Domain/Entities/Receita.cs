@@ -11,7 +11,7 @@ public class Receita : DocumentoBase
     public Guid IdProntuario { get; private set; }
     
     //RELACIONAMENTOS
-    public List<Medicamento> Medicamentos { get; set; }
+    public List<Medicamento> Medicamentos { get; set; } = [];
     public Medico Medico { get; private set; } 
     public Prontuario Prontuario { get; private set; }
 

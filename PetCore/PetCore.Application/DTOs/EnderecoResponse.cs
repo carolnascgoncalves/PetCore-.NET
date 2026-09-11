@@ -14,7 +14,7 @@ public class EnderecoResponse
         Id = endereco.Id;
         Cep = endereco.Cep;
         Complemento = endereco.Complemento;
-        IdClinica = endereco.Clinica.Id;
+        IdClinica = endereco.Clinica?.Id ?? Guid.Empty;
     }
     
 }   

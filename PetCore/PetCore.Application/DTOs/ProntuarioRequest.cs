@@ -18,11 +18,9 @@ public class ProntuarioRequest
     [Required(ErrorMessage = "O campo 'IdHistorico' deve ser preenchido")]
     public Guid IdHistorico { get; set; }
     
-    [Required(ErrorMessage = "O campo 'IdExames' deve ser preenchido")]
-    public List<Guid> IdExames { get; set; }
+    public List<Guid> IdExames { get; set; } = [];
 
-    [Required(ErrorMessage = "O campo 'IdReceitas' deve ser preenchido")]
-    public List<Guid> IdReceitas { get; set; }
+    public List<Guid> IdReceitas { get; set; } = [];
     
 
     

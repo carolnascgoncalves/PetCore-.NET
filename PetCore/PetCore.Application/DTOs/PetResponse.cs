@@ -14,7 +14,6 @@ public class PetResponse
     public string Porte { get;  set; } 
     public GeneroSexoEnum Sexo { get;  set; }
     public bool? Status { get;  set; }
-    public Guid IdHistorico { get; set; }
     public string UrlImg { get; set; }
 
     public PetResponse(Pet pet)
@@ -28,7 +27,6 @@ public class PetResponse
         Porte = pet.Porte;
         Sexo = pet.Sexo;
         Status = pet.Status; 
-        IdHistorico = pet.IdHistorico;
         UrlImg = pet.UrlImg;
     }
 }

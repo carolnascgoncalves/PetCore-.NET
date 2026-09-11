@@ -25,7 +25,7 @@ public class RelatorioService(IRelatorioRepository relatorioRepository,
     {
         var content = relatorioRequest.ToDomain();
         
-        var clinicas = clinicaRepository.FetchAllById(relatorioRequest.IdClinicas);
+        var clinicas = clinicaRepository.FetchAllById(relatorioRequest.IdClinicas ?? []);
         content.Clinicas = clinicas.ToList();
         
         relatorioRepository.Create(content);

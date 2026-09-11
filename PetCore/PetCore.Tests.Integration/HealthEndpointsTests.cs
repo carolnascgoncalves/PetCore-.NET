@@ -19,6 +19,19 @@ public class HealthEndpointsTests(PetCoreApiFactory factory)
     }
 
     [Fact]
+    public async Task HealthReady_DependenciasDisponiveis_RetornaOk()
+    {
+        // Arrange
+        var client = factory.CreateClient();
+
+        // Act
+        var response = await client.GetAsync("/health/ready");
+
+        // Assert
+        Assert.True(response.IsSuccessStatusCode);
+    }
+
+    [Fact]
     public async Task RotaInexistente_RequisicaoInvalida_RetornaNotFound()
     {
         // Arrange

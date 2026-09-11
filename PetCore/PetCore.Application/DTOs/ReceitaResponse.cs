@@ -16,7 +16,7 @@ public class ReceitaResponse
         Nome = receita.Nome;
         Validade = receita.Validade;
         IdMedicoResponsavel = receita.IdMedicoResponsavel;
-        IdMedicamentos = receita.Medicamentos
+        IdMedicamentos = (receita.Medicamentos ?? [])
             .Select(x => x.Id)
             .ToList();
     }

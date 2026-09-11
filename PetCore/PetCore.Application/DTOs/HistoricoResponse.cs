@@ -7,15 +7,15 @@ public class HistoricoResponse
     public Guid Id { get; set; }
     public bool Status { get; set; }
     public List<Guid> IdProntuarios { get; set; }
-    public Guid IdPet { get; set; }
+    public Guid? IdPet { get; set; }
 
     public HistoricoResponse(Historico historico)
     {
         Id = historico.Id;
         Status = historico.Status;
-        IdProntuarios = historico.Prontuarios
+        IdProntuarios = (historico.Prontuarios ?? [])
             .Select(x => x.Id)
             .ToList();
-        IdPet = historico.Pet.Id;
+        IdPet = historico.IdPet;
     }
 }

@@ -19,7 +19,7 @@ public class GlobalExceptionHandler(
             Type = "about:blank",
             Title = title,
             Status = statusCode,
-            Detail = environment.IsProduction() ?  detail : string.Empty,
+            Detail = environment.IsDevelopment() ? detail : string.Empty,
             Instance = httpContext.Request.Path
         };
         

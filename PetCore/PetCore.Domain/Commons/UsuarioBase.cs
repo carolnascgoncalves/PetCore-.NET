@@ -14,5 +14,7 @@ public class UsuarioBase
     
     public string Senha { get; set; }
     
-    public string UrlImg { get; set; }
+    // A imagem é opcional no cadastro. Um valor vazio mantém a coluna não nula
+    // e permite criar tutor e médico apenas com os campos do Swagger.
+    public string UrlImg { get; set; } = string.Empty;
 }

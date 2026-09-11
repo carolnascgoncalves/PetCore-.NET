@@ -41,16 +41,16 @@ internal static class DemoData
             new { Id = ClinicaJardins, Nome = "PetCore Vet Jardins (fictícia)", Cnpj = "98.765.432/0001-10", IdEndereco = EnderecoJardins });
 
         modelBuilder.Entity<Historico>().HasData(
-            new { Id = HistoricoLuna, DataAbertura = new DateOnly(2025, 3, 12), Status = true },
-            new { Id = HistoricoTobias, DataAbertura = new DateOnly(2025, 4, 8), Status = true });
+            new { Id = HistoricoLuna, DataAbertura = new DateOnly(2025, 3, 12), Status = true, IdPet = PetLuna },
+            new { Id = HistoricoTobias, DataAbertura = new DateOnly(2025, 4, 8), Status = true, IdPet = PetTobias });
 
         modelBuilder.Entity<Medico>().HasData(
             new { Id = MedicoHelena, Nome = "Dra. Helena Duarte", DataNascimento = new DateOnly(1985, 8, 14), Telefone = "11987654321", Email = "helena.duarte@exemplo.test", Sexo = GeneroSexoEnum.F, Senha = "SenhaDemo#2026", UrlImg = "https://exemplo.test/medicos/helena.jpg", Especialidade = "Dermatologia" },
             new { Id = MedicoRafael, Nome = "Dr. Rafael Nogueira", DataNascimento = new DateOnly(1982, 2, 20), Telefone = "11976543210", Email = "rafael.nogueira@exemplo.test", Sexo = GeneroSexoEnum.M, Senha = "SenhaDemo#2026", UrlImg = "https://exemplo.test/medicos/rafael.jpg", Especialidade = "Cardiologia" });
 
         modelBuilder.Entity<Pet>().HasData(
-            new { Id = PetLuna, Nome = "Luna", Especie = "Canina", Raca = "Golden Retriever", DataNasc = new DateOnly(2021, 6, 18), Pelagem = "Dourada", Porte = "Grande", Sexo = GeneroSexoEnum.F, Status = true, UrlImg = "https://exemplo.test/pets/luna.jpg", IdHistorico = HistoricoLuna },
-            new { Id = PetTobias, Nome = "Tobias", Especie = "Felina", Raca = "Siamês", DataNasc = new DateOnly(2022, 9, 5), Pelagem = "Creme e marrom", Porte = "Pequeno", Sexo = GeneroSexoEnum.M, Status = true, UrlImg = "https://exemplo.test/pets/tobias.jpg", IdHistorico = HistoricoTobias });
+            new { Id = PetLuna, Nome = "Luna", Especie = "Canina", Raca = "Golden Retriever", DataNasc = new DateOnly(2021, 6, 18), Pelagem = "Dourada", Porte = "Grande", Sexo = GeneroSexoEnum.F, Status = true, UrlImg = "https://exemplo.test/pets/luna.jpg" },
+            new { Id = PetTobias, Nome = "Tobias", Especie = "Felina", Raca = "Siamês", DataNasc = new DateOnly(2022, 9, 5), Pelagem = "Creme e marrom", Porte = "Pequeno", Sexo = GeneroSexoEnum.M, Status = true, UrlImg = "https://exemplo.test/pets/tobias.jpg" });
 
         modelBuilder.Entity<Tutor>().HasData(
             new { Id = TutorMarina, Nome = "Marina Alves", DataNascimento = new DateOnly(1991, 11, 3), Telefone = "11991234567", Email = "marina.alves@exemplo.test", Sexo = GeneroSexoEnum.F, Senha = "SenhaDemo#2026", UrlImg = "https://exemplo.test/tutores/marina.jpg" },

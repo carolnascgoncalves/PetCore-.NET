@@ -55,8 +55,12 @@ public static class PersistenceExtensions
         {
             // DefaultConnection is the standard setting used by hosting providers.
             // PetCoreMySql remains as a fallback so existing local setups keep working.
-            var connectionString = configuration.GetConnectionString("DefaultConnection")
-                ?? configuration.GetConnectionString("PetCoreMySql");
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            if (string.IsNullOrWhiteSpace(connectionString))
+            {
+                connectionString = configuration.GetConnectionString("PetCoreMySql");
+            }
 
             if (string.IsNullOrWhiteSpace(connectionString))
             {

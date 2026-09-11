@@ -8,8 +8,9 @@ public class Protocolo
     private Protocolo() { }
     public Protocolo(string id, string titulo, string texto)
     {
-        if (string.IsNullOrWhiteSpace(id)) throw new Exception("Id do protocolo está vazio");
-        Id = id.Trim().ToUpperInvariant();
+        Id = string.IsNullOrWhiteSpace(id)
+            ? $"PROTO-{Guid.NewGuid():N}"[..20].ToUpperInvariant()
+            : id.Trim().ToUpperInvariant();
         Update(titulo, texto);
     }
     public void Update(string titulo, string texto)

@@ -27,10 +27,10 @@ public class ProntuarioService(IProntuarioRepository prontuarioRepository,
         var pront = prontuarioRequest.ToDomain();
 
         var exames = exameRepository
-            .FetchAllById(prontuarioRequest.IdExames);
+            .FetchAllById(prontuarioRequest.IdExames ?? []);
 
         var receitas = receitaRepository
-            .FetchAllById(prontuarioRequest.IdReceitas);
+            .FetchAllById(prontuarioRequest.IdReceitas ?? []);
 
         pront.Exames = exames.ToList();
         pront.Receitas = receitas.ToList();

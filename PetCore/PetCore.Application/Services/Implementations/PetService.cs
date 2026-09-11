@@ -33,7 +33,7 @@ public class PetService(IPetRepository petRepository,
         var pet = petRequest.ToDomain();
 
         var tutores = tutorRepository
-            .FetchAllById(petRequest.IdTutores);
+            .FetchAllById(petRequest.IdTutores ?? []);
 
         pet.Tutores = tutores.ToList();
 

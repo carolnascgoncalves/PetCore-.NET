@@ -12,9 +12,9 @@ public class Prontuario
     public Guid IdMedico { get; private set; }
     
     //RELACIONAMENTOS
-    public List<Exame> Exames { get;  set; }
+    public List<Exame> Exames { get; set; } = [];
     
-    public List<Receita> Receitas { get;  set; }
+    public List<Receita> Receitas { get; set; } = [];
     
     public Medico Medico { get; private set; }
     

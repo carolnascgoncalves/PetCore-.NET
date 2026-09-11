@@ -18,9 +18,10 @@ public class RelatorioRequest
     [Required(ErrorMessage = "O campo 'IdHistorico' deve ser preenchido")]
     public Guid IdHistorico { get; set; }
     
-    [Required(ErrorMessage = "O campo 'IdClinicas' deve ser preenchido")]
-    public List<Guid> IdClinicas { get; set; }
+    public List<Guid> IdClinicas { get; set; } = [];
     
     public Relatorio ToDomain() =>
-        new (Observacao, IdMedico, IdHistorico);
+        // O construtor recebe o histórico antes do médico. Nomear os argumentos
+        // impede que dois GUIDs válidos sejam gravados nas colunas trocadas.
+        new(observacao: Observacao, idHistorico: IdHistorico, idMedicoResponsavel: IdMedico);
 }

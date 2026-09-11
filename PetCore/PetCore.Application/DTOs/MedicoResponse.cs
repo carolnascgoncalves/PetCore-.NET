@@ -27,16 +27,16 @@ public class MedicoResponse
         Sexo = medico.Sexo;
         Especialidade = medico.Especialidade;
         
-        IdRelatorios = medico.Relatorios
+        IdRelatorios = (medico.Relatorios ?? [])
             .Select(x => x.Id)
             .ToList();
-        IdProntuarios = medico.Prontuarios
+        IdProntuarios = (medico.Prontuarios ?? [])
             .Select(x => x.Id)
             .ToList();
-        IdExames = medico.Exames
+        IdExames = (medico.Exames ?? [])
             .Select(x => x.Id)
             .ToList();
-        IdReceitas = medico.Receitas
+        IdReceitas = (medico.Receitas ?? [])
             .Select(x => x.Id)
             .ToList();
         

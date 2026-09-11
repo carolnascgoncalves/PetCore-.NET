@@ -19,10 +19,10 @@ public class ProntuarioResponse
         DataEmissao = prontuario.DataEmissao;
         Descricao = prontuario.Descricao;
         IdMedico = prontuario.IdMedico;
-        IdExames = prontuario.Exames
+        IdExames = (prontuario.Exames ?? [])
             .Select(x => x.Id)
             .ToList();
-        IdReceitas = prontuario.Receitas
+        IdReceitas = (prontuario.Receitas ?? [])
             .Select(x => x.Id)
             .ToList();
         IdHistorico = prontuario.IdHistorico;

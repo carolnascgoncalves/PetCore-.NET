@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using MySqlConnector;
+using Npgsql;
 
 namespace PetCore.Exceptions;
 
@@ -38,7 +38,7 @@ public class GlobalExceptionHandler(
             InvalidOperationException e => (StatusCodes.Status400BadRequest, "Não foi possível concluir a operação", e.Message),
             KeyNotFoundException e => (StatusCodes.Status404NotFound, "Recurso não encontrado", e.Message),
             UnauthorizedAccessException e => (StatusCodes.Status401Unauthorized, "Não autorizado", e.Message),
-            MySqlException e=> (StatusCodes.Status500InternalServerError, "Banco de dados indisponivel", e.Message),
+            NpgsqlException e => (StatusCodes.Status500InternalServerError, "Banco de dados indisponível", e.Message),
             _ => MapUnhandled(environment, exception)
         };
     }

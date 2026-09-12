@@ -19,7 +19,7 @@ public class GlobalExceptionHandler(
             Type = "about:blank",
             Title = title,
             Status = statusCode,
-            Detail = detail,
+            Detail = $"ERRO CAPTURADO: {exception.GetType().Name} - {exception.Message}",
             Instance = httpContext.Request.Path
         };
         

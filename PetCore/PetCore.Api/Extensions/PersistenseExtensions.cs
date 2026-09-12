@@ -53,8 +53,7 @@ public static class PersistenceExtensions
     {
         services.AddDbContext<PetCoreContext>(options =>
         {
-            // DefaultConnection is the standard setting used by hosting providers.
-            // PetCoreMySql remains as a fallback so existing local setups keep working.
+  
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             if (string.IsNullOrWhiteSpace(connectionString))
@@ -67,7 +66,7 @@ public static class PersistenceExtensions
                 throw new InvalidOperationException(
                     "A conexão com o banco não foi configurada. Defina ConnectionStrings__DefaultConnection.");
             }
-            options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 36)));
+            options.UseNpgsql(connectionString);
         });
         return services;
     }

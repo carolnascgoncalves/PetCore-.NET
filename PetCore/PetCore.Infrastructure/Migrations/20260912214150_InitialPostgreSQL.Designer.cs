@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PetCore.Infrastructure.Persistence;
@@ -11,9 +12,11 @@ using PetCore.Infrastructure.Persistence;
 namespace PetCore.Infrastructure.Migrations
 {
     [DbContext(typeof(PetCoreContext))]
-    partial class PetCoreContextModelSnapshot : ModelSnapshot
+    [Migration("20260912214150_InitialPostgreSQL")]
+    partial class InitialPostgreSQL
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

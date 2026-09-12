@@ -19,7 +19,7 @@ public class GlobalExceptionHandler(
             Type = "about:blank",
             Title = title,
             Status = statusCode,
-            Detail = environment.IsDevelopment() ? detail : string.Empty,
+            Detail = detail,
             Instance = httpContext.Request.Path
         };
         
@@ -58,3 +58,5 @@ public class GlobalExceptionHandler(
             "Ocorreu um erro inesperado. Tente novamente mais tarde.");
     }
 }
+
+
